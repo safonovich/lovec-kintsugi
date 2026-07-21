@@ -9,7 +9,7 @@
   "segment": "company",
   "city": "Москва",
   "note": "Тестовый лид: КП придёт на твою же почту. Ответь на него со своего ящика — проверишь переговорный контур. Письма бота помечены X-Lovec-Kintsugi, самозацикливания нет.",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -22,7 +22,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Из заметки «Лиды — B2B корпоративы»: тёплый канал, ищут новые форматы для клиентов",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -35,7 +35,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство; телефон городской — почту добудет Collect с сайта",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
