@@ -1,0 +1,45 @@
+name: Kintsugi
+
+on:
+  schedule:
+    - cron: "*/15 6-18 * * *"   # каждые 15 мин, 6-18 UTC = 9-21 МСК (GitHub может задерживать)
+  workflow_dispatch:            # ручной запуск кнопкой
+
+concurrency:
+  group: kintsugi
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Установка зависимостей
+        run: pip install -r requirements.txt
+
+      - name: Запуск
+        env:
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+        run: python kt/run.py
+
+      - name: Сохранить состояние
+        run: |
+          git config user.name "kintsugi-bot"
+          git config user.email "kintsugi@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || (git commit -m "state: $(date -u +%F_%H:%M)" && git pull --rebase && git push)
