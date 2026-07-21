@@ -128,7 +128,8 @@ def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log):
             if lead.get("status") == "sent":
                 _answer(cq["id"], "Уже отправляли этому адресату")
                 continue
-            ok = mailer.send(lead["email"], info["subject"], info["body"], cfg, log)
+            ok = mailer.send(lead["email"], info["subject"], info["body"], cfg, log,
+                             attach_kp=True)
             if ok:
                 lead["status"] = "sent"
                 lead["sent_ts"] = time.time()

@@ -26,7 +26,7 @@ def _to_html(body: str, cfg: dict) -> str:
 
 
 def send(to: str, subject: str, body: str, cfg: dict, log,
-         in_reply_to: str | None = None) -> bool:
+         in_reply_to: str | None = None, attach_kp: bool = False) -> bool:
     e = cfg["email"]
     user = os.environ.get("SMTP_USER", "").strip()
     pwd = os.environ.get("SMTP_PASS", "").strip()
@@ -47,6 +47,15 @@ def send(to: str, subject: str, body: str, cfg: dict, log,
         msg.add_alternative(_to_html(body, cfg), subtype="html")
     except Exception:
         pass  # HTML-версия опциональна — plain text уйдёт в любом случае
+    if attach_kp and cfg["kp"].get("attachment"):
+        try:
+            from pathlib import Path
+            p = Path(__file__).resolve().parent.parent / cfg["kp"]["attachment"]
+            msg.add_attachment(
+                p.read_bytes(), maintype="application", subtype="pdf",
+                filename=cfg["kp"].get("attachment_name", p.name))
+        except Exception as ex:
+            log(f"mailer: КП-вложение не прикрепилось ({ex}) — письмо уйдёт без него")
     try:
         host, port = e["smtp_host"], int(e.get("smtp_port", 465))
         if port == 465:
