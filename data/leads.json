@@ -48,7 +48,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Тимбилдинг-центр; сайт — страница-каталог, контакты может не отдать",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+74995017704"
  },
@@ -62,7 +62,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство, есть форма на сайте",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+79161525037"
  },
@@ -76,7 +76,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Мобильный номер — сработает кнопка WhatsApp",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
