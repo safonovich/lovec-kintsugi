@@ -89,7 +89,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Специализация — тимбилдинги; контакты добудет Collect",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+79161308385"
  },
@@ -103,7 +103,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+79167430402"
  },
@@ -117,7 +117,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
