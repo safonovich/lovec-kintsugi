@@ -129,9 +129,9 @@
   "tg": null,
   "segment": "event",
   "city": "Москва",
-  "note": "",
-  "status": "offered",
-  "sent_ts": null
+  "note": "КП ушло 24.07 по кнопке (первое событие перед крашем — письмо реально отправлено). ",
+  "status": "sent",
+  "sent_ts": 1784903248.07664
  },
  {
   "id": "itone",

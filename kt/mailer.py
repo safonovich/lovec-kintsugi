@@ -27,6 +27,11 @@ def _to_html(body: str, cfg: dict) -> str:
 
 def send(to: str, subject: str, body: str, cfg: dict, log,
          in_reply_to: str | None = None, attach_kp: bool = False) -> bool:
+    # Заголовки не терпят переносов строк (складные Subject из IMAP роняли отправку)
+    subject = re.sub(r"[\r\n]+", " ", str(subject)).strip()
+    to = str(to).strip()
+    if in_reply_to:
+        in_reply_to = re.sub(r"[\r\n]+", "", str(in_reply_to)).strip()
     e = cfg["email"]
     user = os.environ.get("SMTP_USER", "").strip()
     pwd = os.environ.get("SMTP_PASS", "").strip()
