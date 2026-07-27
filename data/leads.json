@@ -89,8 +89,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Специализация — тимбилдинги; контакты добудет Collect",
-  "status": "offered",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1785176603.4790087,
   "wa": "+79161308385"
  },
  {
@@ -103,8 +103,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "",
-  "status": "offered",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1785176605.894623,
   "wa": "+79167430402"
  },
  {
@@ -117,8 +117,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Писали 13.07, RedG ответил — переписка вручную с 14.07. Бот пришлёт черновики на их новые письма.",
-  "status": "replied",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1785176608.0290897
  },
  {
   "id": "mediaevent",
