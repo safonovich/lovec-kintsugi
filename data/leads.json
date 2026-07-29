@@ -212,7 +212,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Ивент-агентство, тимбилдинги с 2010 года",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -225,7 +225,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Организация корпоративных тимбилдингов, Москва",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+79332034825"
  },
@@ -239,7 +239,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство полного цикла, мероприятия под ключ",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
