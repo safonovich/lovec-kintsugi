@@ -239,8 +239,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство полного цикла, мероприятия под ключ",
-  "status": "offered",
-  "sent_ts": null
+  "status": "skipped",
+  "sent_ts": 1785399439.2315156
  },
  {
   "id": "trendevent",
