@@ -125,6 +125,10 @@ def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log):
             _mark(cq, "✍️ отвечаешь сам")
             pending.pop(sk, None)
         elif action == "x":
+            if lead.get("status") == "sent":
+                _answer(cq["id"], "КП уже отправлено — статус не трогаю")
+                log(f"skip проигнорирован (уже sent): {lead['name']}")
+                continue
             lead["status"] = "skipped"
             _answer(cq["id"], "Пропустили 👌")
             _mark(cq, "🚫 пропущено")
