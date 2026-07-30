@@ -49,6 +49,8 @@ def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log):
             requests.get(_api("deleteWebhook"), timeout=10)
         if info.get("pending_update_count"):
             log(f"callbacks: в очереди Telegram {info['pending_update_count']} необработанных событий")
+        # Полная диагностика: видно, не забирает ли события кто-то другой
+        log(f"callbacks: webhook_info = {info}")
     except Exception:
         pass
     try:
@@ -67,6 +69,9 @@ def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log):
 
     if updates:
         log(f"callbacks: получено событий: {len(updates)}")
+    else:
+        log(f"callbacks: очередь пуста (offset={offset}) — если кнопки жали "
+            "только что, события забирает другой процесс с этим же токеном")
     by_id = {a["id"]: a for a in leads}
     new_offset = offset
     for u in updates:
