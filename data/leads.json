@@ -352,7 +352,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Корпоративные игры и тимбилдинг под ключ",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -365,7 +365,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы (vc.ru 2025)",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -378,7 +378,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
