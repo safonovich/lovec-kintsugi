@@ -83,6 +83,7 @@ def main() -> None:
     today = now.strftime("%Y-%m-%d")
     if state.get("last_leads_date") != today and now.hour >= b.get("lead_hour_msk", 10):
         fresh = [a for a in leads if a.get("status", "new") == "new"]
+        fresh.sort(key=lambda a: not a.get("email"))   # сначала лиды с почтой
         batch = fresh[:b.get("daily_leads", 3)]
         if not batch:
             if state.get("base_empty_warned") != today:
