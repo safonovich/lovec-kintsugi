@@ -431,7 +431,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Агрегатор выездных мастер-классов на корпоративы — целевой партнёр №1",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null,
   "wa": "+79037215247"
  },
@@ -458,7 +458,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE-агентство, деловые мероприятия",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -471,7 +471,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE и корпоративные события",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
