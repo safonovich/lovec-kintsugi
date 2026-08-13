@@ -445,7 +445,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE и деловой туризм — корпоративные программы",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  },
  {
@@ -484,7 +484,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE-агентство, мероприятия под ключ",
-  "status": "new",
+  "status": "offered",
   "sent_ts": null
  }
 ]
