@@ -37,6 +37,52 @@ def issue_lead(a: dict, cfg: dict, pending: dict) -> None:
     log(f"lead: {a['name']}")
 
 
+def autosend(leads: list, state: dict, cfg: dict, today: str,
+             interval_min: int, log) -> None:
+    """Очередь автоотправки: одно письмо за прогон, не чаще раза в interval_min.
+
+    Кнопку 📧 не ждём — КП генерируется и уходит само, копия падает владельцу.
+    Ручное подтверждение оказалось узким местом: письма копились в offered."""
+    gap = interval_min * 60
+    waited = time.time() - state.get("autosend_ts", 0)
+    if waited < gap:
+        log(f"автоотправка: рано — прошло {int(waited // 60)} мин из {interval_min}")
+        return
+
+    queue = [a for a in leads
+             if a.get("status", "new") == "new" and a.get("email")]
+    if not queue:
+        if state.get("base_empty_warned") != today:
+            notify.send_service(
+                "📭 Очередь автоотправки пуста — пополни data/leads.json "
+                "или нажми «🔄 Обновить базу».", log)
+            state["base_empty_warned"] = today
+        return
+
+    a = queue[0]
+    found = enrich.enrich(a, log)
+    for f in ("email", "phone", "tg", "wa"):
+        if found.get(f) and not a.get(f):
+            a[f] = found[f]
+    subject, body = kp.make(a, found.get("site_text", ""), cfg, log)
+
+    if mailer.send(a["email"], subject, body, cfg, log, attach_kp=True):
+        a["status"] = "sent"
+        a["sent_ts"] = time.time()
+        state["autosend_ts"] = time.time()
+        notify.send_service(
+            f"✉️ Ушло письмо → {a['name']} ({a['email']})\n"
+            f"Тема: {subject}\n"
+            f"Осталось в очереди: {len(queue) - 1}\n\n{body}", log)
+        log(f"автоотправка: {a['name']}, осталось {len(queue) - 1}")
+    else:
+        # пауза всё равно взводится, чтобы не долбиться в тот же адрес каждый прогон
+        state["autosend_ts"] = time.time()
+        notify.send_service(
+            f"⚠️ Не удалось отправить {a['name']} ({a['email']}) — "
+            f"письмо не ушло, лид остался в очереди.", log)
+
+
 def main() -> None:
     cfg = tomllib.loads(
         (Path(__file__).parent / "config.toml").read_text(encoding="utf-8"))
@@ -79,9 +125,14 @@ def main() -> None:
                     a["followup_ts"] = time.time()
                     notify.send_service(f"📮 Фоллоу-ап ушёл: {a['name']}", log)
 
-    # 4. Порция новых лидов — раз в день, после lead_hour_msk
     today = now.strftime("%Y-%m-%d")
-    if state.get("last_leads_date") != today and now.hour >= b.get("lead_hour_msk", 10):
+
+    # 4. Автоотправка (если включена) — письма уходят сами, по одному за прогон.
+    #    Иначе старый режим: порция карточек раз в день, отправка по кнопке.
+    aus = cfg.get("autosend", {})
+    if aus.get("enabled"):
+        autosend(leads, state, cfg, today, aus.get("interval_min", 30), log)
+    elif state.get("last_leads_date") != today and now.hour >= b.get("lead_hour_msk", 10):
         fresh = [a for a in leads if a.get("status", "new") == "new"]
         fresh.sort(key=lambda a: not a.get("email"))   # сначала лиды с почтой
         batch = fresh[:b.get("daily_leads", 3)]

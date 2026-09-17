@@ -53,6 +53,12 @@ template = """Добрый день!
 {author}
 {portfolio} · {tg} · {phone}"""
 
+[autosend]
+# Письма уходят САМИ, без кнопки 📧: одно письмо за прогон, не чаще interval_min.
+# Копия каждого ушедшего письма падает владельцу в Telegram.
+enabled      = true
+interval_min = 30   # пауза между письмами. Фактическая не меньше интервала прогонов Actions
+
 [llm]
 enabled  = true              # персонализация КП + черновики ответов
 provider = "chad"            # ChadGPT (подписка SAF) · "openai" = OpenRouter/AITunnel · "anthropic" = Claude
