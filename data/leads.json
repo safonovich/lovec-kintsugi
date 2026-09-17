@@ -9,7 +9,7 @@
   "segment": "company",
   "city": "Москва",
   "note": "Тестовый лид: КП придёт на твою же почту. Ответь на него со своего ящика — проверишь переговорный контур. Письма бота помечены X-Lovec-Kintsugi, самозацикливания нет.",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -35,7 +35,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство; телефон городской — почту добудет Collect с сайта",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -62,7 +62,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство, есть форма на сайте",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79161525037"
  },
@@ -76,7 +76,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Мобильный номер — сработает кнопка WhatsApp",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -175,7 +175,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Агентство тимбилдингов, отдельный каталог выездных мастер-классов — кинцуги впишется как новый формат",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -188,7 +188,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Корпоративы и тимбилдинги под ключ; мобильный номер — сработает WhatsApp",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79253417076"
  },
@@ -202,7 +202,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Деловые игры и тимбилдинги для компаний — предложить кинцуги как спокойный формат в каталог",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -215,7 +215,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Ивент-агентство, тимбилдинги с 2010 года",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -228,7 +228,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Организация корпоративных тимбилдингов, Москва",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79332034825"
  },
@@ -255,7 +255,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Корпоративы и тимбилдинги под ключ, Москва",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79261916925"
  },
@@ -269,7 +269,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Своя студия мастер-классов в центре Москвы + 70 площадок; отдельный раздел «мастер-классы на корпоратив» — прямое попадание",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -282,7 +282,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Тимбилдинги в помещении и на выезде по всей России",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79037920486"
  },
@@ -296,7 +296,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Арт-тимбилдинги под ключ (рисование общей картины и т.п.) — кинцуги рядом с их форматами",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -339,7 +339,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Лофты специально под мастер-классы и тренинги — партнёрство площадка+мастер",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -391,7 +391,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79037971007"
  },
@@ -405,7 +405,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -418,7 +418,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -431,7 +431,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Агрегатор выездных мастер-классов на корпоративы — целевой партнёр №1",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null,
   "wa": "+79037215247"
  },
@@ -458,7 +458,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE-агентство, деловые мероприятия",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -471,7 +471,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE и корпоративные события",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  },
  {
@@ -484,7 +484,7 @@
   "segment": "event",
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE-агентство, мероприятия под ключ",
-  "status": "offered",
+  "status": "new",
   "sent_ts": null
  }
 ]
