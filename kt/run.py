@@ -37,50 +37,76 @@ def issue_lead(a: dict, cfg: dict, pending: dict) -> None:
     log(f"lead: {a['name']}")
 
 
-def autosend(leads: list, state: dict, cfg: dict, today: str,
-             interval_min: int, log) -> None:
-    """Очередь автоотправки: одно письмо за прогон, не чаще раза в interval_min.
-
-    Кнопку 📧 не ждём — КП генерируется и уходит само, копия падает владельцу.
-    Ручное подтверждение оказалось узким местом: письма копились в offered."""
-    gap = interval_min * 60
-    waited = time.time() - state.get("autosend_ts", 0)
-    if waited < gap:
-        log(f"автоотправка: рано — прошло {int(waited // 60)} мин из {interval_min}")
-        return
-
-    queue = [a for a in leads
-             if a.get("status", "new") == "new" and a.get("email")]
-    if not queue:
-        if state.get("base_empty_warned") != today:
-            notify.send_service(
-                "📭 Очередь автоотправки пуста — пополни data/leads.json "
-                "или нажми «🔄 Обновить базу».", log)
-            state["base_empty_warned"] = today
-        return
-
-    a = queue[0]
+def _send_one(a: dict, cfg: dict, log) -> bool:
+    """Обогатить лид, сгенерировать КП и отправить письмо. True — ушло."""
     found = enrich.enrich(a, log)
     for f in ("email", "phone", "tg", "wa"):
         if found.get(f) and not a.get(f):
             a[f] = found[f]
     subject, body = kp.make(a, found.get("site_text", ""), cfg, log)
-
     if mailer.send(a["email"], subject, body, cfg, log, attach_kp=True):
         a["status"] = "sent"
         a["sent_ts"] = time.time()
-        state["autosend_ts"] = time.time()
         notify.send_service(
             f"✉️ Ушло письмо → {a['name']} ({a['email']})\n"
-            f"Тема: {subject}\n"
-            f"Осталось в очереди: {len(queue) - 1}\n\n{body}", log)
-        log(f"автоотправка: {a['name']}, осталось {len(queue) - 1}")
-    else:
-        # пауза всё равно взводится, чтобы не долбиться в тот же адрес каждый прогон
+            f"Тема: {subject}\n\n{body}", log)
+        return True
+    notify.send_service(
+        f"⚠️ Не удалось отправить {a['name']} ({a['email']}) — "
+        f"письмо не ушло, лид остался в очереди.", log)
+    return False
+
+
+def autosend(leads: list, state: dict, cfg: dict, today: str,
+             interval_min: int, per_run: int, log) -> None:
+    """Пачка писем за один прогон, с паузой interval_min ВНУТРИ прогона.
+
+    GitHub душит расписание до ~3 прогонов в сутки, поэтому ждать следующего
+    прогона ради следующего письма бессмысленно — пауза держится тут, sleep'ом.
+    Состояние сохраняется после каждого письма: если job убьют посередине,
+    уже отправленные не уйдут повторно."""
+    gap = interval_min * 60
+    h0, h1 = cfg["bot"].get("active_hours_msk", [9, 22])
+    sent = 0
+
+    while sent < per_run:
+        now = datetime.datetime.now(MSK)
+        if not (h0 <= now.hour < h1):
+            log(f"автоотправка: рабочие часы кончились ({now:%H:%M} МСК) — стоп")
+            break
+
+        waited = time.time() - state.get("autosend_ts", 0)
+        if waited < gap:
+            if sent == 0:
+                log(f"автоотправка: рано — прошло {int(waited // 60)} мин "
+                    f"из {interval_min}")
+                return
+            log(f"автоотправка: пауза {int((gap - waited) // 60)} мин")
+            time.sleep(gap - waited)
+            continue
+
+        queue = [a for a in leads
+                 if a.get("status", "new") == "new" and a.get("email")]
+        if not queue:
+            if sent == 0 and state.get("base_empty_warned") != today:
+                notify.send_service(
+                    "📭 Очередь автоотправки пуста — пополни data/leads.json "
+                    "или нажми «🔄 Обновить базу».", log)
+                state["base_empty_warned"] = today
+            else:
+                notify.send_service("📭 Очередь опустела — все письма разосланы.", log)
+            break
+
+        a = queue[0]
+        _send_one(a, cfg, log)
+        # пауза взводится в любом случае: при сбое SMTP не долбимся в тот же адрес
         state["autosend_ts"] = time.time()
-        notify.send_service(
-            f"⚠️ Не удалось отправить {a['name']} ({a['email']}) — "
-            f"письмо не ушло, лид остался в очереди.", log)
+        sent += 1
+        # сохраняем сразу — job может быть убит на середине пачки
+        store.save("leads.json", leads)
+        store.save("tg_state.json", state)
+        log(f"автоотправка: отправлено за прогон {sent}/{per_run}, "
+            f"в очереди осталось {len(queue) - 1}")
 
 
 def main() -> None:
@@ -131,7 +157,8 @@ def main() -> None:
     #    Иначе старый режим: порция карточек раз в день, отправка по кнопке.
     aus = cfg.get("autosend", {})
     if aus.get("enabled"):
-        autosend(leads, state, cfg, today, aus.get("interval_min", 30), log)
+        autosend(leads, state, cfg, today, aus.get("interval_min", 30),
+                 aus.get("per_run", 6), log)
     elif state.get("last_leads_date") != today and now.hour >= b.get("lead_hour_msk", 10):
         fresh = [a for a in leads if a.get("status", "new") == "new"]
         fresh.sort(key=lambda a: not a.get("email"))   # сначала лиды с почтой
