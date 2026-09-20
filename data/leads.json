@@ -35,8 +35,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство; телефон городской — почту добудет Collect с сайта",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1789912243.3842022
  },
  {
   "id": "1event",
