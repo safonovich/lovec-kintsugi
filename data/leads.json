@@ -62,8 +62,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Event-агентство, есть форма на сайте",
-  "status": "new",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1789925561.5539885,
   "wa": "+79161525037"
  },
  {
