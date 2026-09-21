@@ -76,8 +76,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Мобильный номер — сработает кнопка WhatsApp",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1789989819.252521
  },
  {
   "id": "teamb",
