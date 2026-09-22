@@ -215,8 +215,8 @@
   "segment": "event",
   "city": "Москва",
   "note": "Ивент-агентство, тимбилдинги с 2010 года",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1790103068.5111847
  },
  {
   "id": "musprokat",
