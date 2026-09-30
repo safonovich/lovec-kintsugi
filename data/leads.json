@@ -407,7 +407,8 @@
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
   "status": "sent",
   "sent_ts": 1790418542.110244,
-  "wa": "+79037971007"
+  "wa": "+79037971007",
+  "followup_ts": 1790767961.2331772
  },
  {
   "id": "7dreams",
@@ -500,5 +501,57 @@
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): MICE-агентство, мероприятия под ключ",
   "status": "sent",
   "sent_ts": 1790682395.5263288
+ },
+ {
+  "id": "ingate",
+  "name": "Ingate",
+  "site": "https://ingate.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Крупный системный интегратор с развитой HR-службой",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "jet",
+  "name": "Инфосистемы Джет",
+  "site": "https://jet.su",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Крупный системный интегратор с фокусом на команду",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "rtsolar",
+  "name": "Ростелеком-Солар",
+  "site": "https://rt-solar.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · IT-компания в сфере информационной безопасности",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "teambuilding",
+  "name": "Teambuilding",
+  "site": "https://www.teambuilding.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "event",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Специализируются именно на корпоративных тимбилдингах",
+  "status": "new",
+  "sent_ts": null
  }
 ]
