@@ -421,7 +421,8 @@
   "city": "Москва",
   "note": "Найден Claude 10.08 (веб-поиск, источник живой): Из топ-15 event-агентств Москвы",
   "status": "sent",
-  "sent_ts": 1790433534.1887665
+  "sent_ts": 1790433534.1887665,
+  "followup_ts": 1790787591.4688215
  },
  {
   "id": "lavkachudes",
@@ -551,6 +552,32 @@
   "segment": "event",
   "city": "Москва",
   "note": "кандидат от нейронки, сайт проверен · Специализируются именно на корпоративных тимбилдингах",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "chefshows",
+  "name": "Chefshows",
+  "site": "https://chefshows.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "event",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Кулинарные тимбилдинги и корпоративы, работают с крупным бизнесом",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "yandex",
+  "name": "Яндекс",
+  "site": "https://yandex.ru/jobs",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Технологический гигант с регулярными корпоративными активностями",
   "status": "new",
   "sent_ts": null
  }
