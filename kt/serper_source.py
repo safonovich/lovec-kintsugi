@@ -140,6 +140,21 @@ def _name_is_junk(name: str) -> bool:
     return n in JUNK_NAMES or len(n) < 3
 
 
+# Описание услуги вместо названия: «Выездной тимбилдинг для компаний».
+# Такой заголовок ничего не говорит о том, кому мы пишем — берём домен.
+DESCRIPTIVE_MARKERS = (
+    "тимбилдинг", "корпоратив", "мастер-класс", "мастер класс", "организация",
+    "проведение", "выездн", "для компаний", "для сотрудников", "под ключ",
+    "квест", "лазертаг", "праздник", "мероприяти", "деловой туризм",
+    "заказать", "цена", "купить", "аренда", "доставка",
+)
+
+
+def _is_description(name: str) -> bool:
+    n = name.lower()
+    return any(m in n for m in DESCRIPTIVE_MARKERS)
+
+
 def clean_name(title: str, domain: str) -> str | None:
     """Из заголовка страницы сделать название компании.
 
@@ -155,7 +170,8 @@ def clean_name(title: str, domain: str) -> str | None:
         return None
 
     brand = _strip_generic(name)
-    if 2 < len(brand) <= 60 and len(brand.split()) <= 4 and not _name_is_junk(brand):
+    if (2 < len(brand) <= 60 and len(brand.split()) <= 4
+            and not _name_is_junk(brand) and not _is_description(brand)):
         return brand
 
     base = domain.split(".")[0].replace("-", " ")
