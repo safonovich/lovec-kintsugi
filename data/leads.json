@@ -152,8 +152,8 @@
   "city": "Москва",
   "note": "Письмо отправлено вручную 13.07 (до бота). Авто-фоллоу-ап отключён. Ответят — бот подхватит.",
   "status": "sent",
-  "sent_ts": 1783965600.0,
-  "followup_ts": 1783965601.0
+  "sent_ts": 1783965600,
+  "followup_ts": 1783965601
  },
  {
   "id": "ocs",
@@ -166,8 +166,8 @@
   "city": "Москва",
   "note": "Письмо отправлено вручную 13.07 (до бота). Авто-фоллоу-ап отключён. Ответят — бот подхватит.",
   "status": "sent",
-  "sent_ts": 1783965600.0,
-  "followup_ts": 1783965601.0
+  "sent_ts": 1783965600,
+  "followup_ts": 1783965601
  },
  {
   "id": "westart",
@@ -626,7 +626,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация тимбилдингов",
+  "name": "Art Enot",
   "site": "https://art-enot.ru",
   "email": "zakaz@art-enot.ru",
   "phone": null,
@@ -636,7 +636,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация мероприятий",
+  "name": "Eventum Premo",
   "site": "https://eventum-premo.ru",
   "email": "go@eventum-premo.ru",
   "phone": null,
@@ -646,7 +646,7 @@
   "sent_ts": null
  },
  {
-  "name": "деловых мероприятий",
+  "name": "Eventcatalog",
   "site": "https://eventcatalog.ru",
   "email": "event@main-stage.ru",
   "phone": null,
@@ -656,7 +656,7 @@
   "sent_ts": null
  },
  {
-  "name": "Event агентство москва,организация мероприятий,заказать",
+  "name": "Eventaptvisit",
   "site": "https://eventaptvisit.ru",
   "email": "info@eventaptvisit.ru",
   "phone": null,
@@ -666,7 +666,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация корпоративов «под ключ»",
+  "name": "Svyazi Agency",
   "site": "https://svyazi-agency.ru",
   "email": null,
   "phone": null,
@@ -686,7 +686,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация корпоративов",
+  "name": "Nk Project",
   "site": "https://nk-project.com",
   "email": "info@nktrans-group.ru",
   "phone": null,
@@ -696,7 +696,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездные мастер-классы на корпоратив",
+  "name": "Karyselidey",
   "site": "https://karyselidey.ru",
   "email": null,
   "phone": null,
@@ -706,7 +706,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездные мастер классы",
+  "name": "Art Active24",
   "site": "https://art-active24.ru",
   "email": "info@art-active24.ru",
   "phone": null,
@@ -726,7 +726,7 @@
   "sent_ts": null
  },
  {
-  "name": "Мастер-классы на корпоратив",
+  "name": "Jazhda",
   "site": "https://jazhda.ru",
   "email": "art@jazhda.ru",
   "phone": null,
@@ -746,7 +746,7 @@
   "sent_ts": null
  },
  {
-  "name": "Корпоратив в гончарной студии",
+  "name": "Artscool",
   "site": "https://artscool.ru",
   "email": null,
   "phone": null,
@@ -766,7 +766,7 @@
   "sent_ts": null
  },
  {
-  "name": "20 интересных мастер-классов",
+  "name": "T J",
   "site": "https://t-j.ru",
   "email": null,
   "phone": null,
@@ -776,7 +776,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация выездного тимбилдинга",
+  "name": "Rudaevent",
   "site": "https://rudaevent.com",
   "email": null,
   "phone": null,
@@ -786,7 +786,7 @@
   "sent_ts": null
  },
  {
-  "name": "ООО «Агентство делового туризма",
+  "name": "Bizfam",
   "site": "https://bizfam.ru",
   "email": null,
   "phone": null,
@@ -856,7 +856,7 @@
   "sent_ts": null
  },
  {
-  "name": "организация новогоднего корпоратива",
+  "name": "MSK",
   "site": "https://msk.2divana.show",
   "email": null,
   "phone": null,
@@ -886,7 +886,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация и проведение мероприятий",
+  "name": "Aviacenter",
   "site": "https://aviacenter.ru",
   "email": "subagent@aviacenter.ru",
   "phone": null,
@@ -906,7 +906,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация тимбилдинга для сотрудников",
+  "name": "Mmcatering",
   "site": "https://mmcatering.ru",
   "email": null,
   "phone": null,
@@ -926,7 +926,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация деловых мероприятий",
+  "name": "Moscow",
   "site": "https://moscow.orgsinfo.ru",
   "email": null,
   "phone": null,
@@ -936,7 +936,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация корпоратива",
+  "name": "Prazdnikon",
   "site": "https://prazdnikon.ru",
   "email": "info@prazdnikon.ru",
   "phone": null,
@@ -946,7 +946,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация и проведение корпоратива",
+  "name": "Proconcert",
   "site": "https://proconcert.ru",
   "email": "info@proconcert.ru",
   "phone": null,
@@ -956,7 +956,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация корпоративного отдыха",
+  "name": "Artevent24",
   "site": "https://artevent24.ru",
   "email": "info@artevent24.ru",
   "phone": null,
@@ -966,7 +966,7 @@
   "sent_ts": null
  },
  {
-  "name": "Где провести корпоратив",
+  "name": "Wedwed",
   "site": "https://wedwed.ru",
   "email": "info@wedwed.ru",
   "phone": null,
@@ -976,7 +976,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездные мастер-классы на мероприятия",
+  "name": "MSK",
   "site": "https://msk.tvorilnya.ru",
   "email": "info@tvorilnya.ru",
   "phone": null,
@@ -996,7 +996,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездной мастер-класс в офисе",
+  "name": "Vkusoterria",
   "site": "https://vkusoterria.ru",
   "email": "guest@vkusoterria.ru",
   "phone": null,
@@ -1006,7 +1006,7 @@
   "sent_ts": null
  },
  {
-  "name": "Корпоративные мастер-классы",
+  "name": "Wowpovod",
   "site": "https://wowpovod.ru",
   "email": "event@wowpovod.ru",
   "phone": null,
@@ -1026,7 +1026,7 @@
   "sent_ts": null
  },
  {
-  "name": "Интересные Мастер-классы для взрослых",
+  "name": "Xpresent",
   "site": "https://xpresent.ru",
   "email": "info@xpresent.ru",
   "phone": null,
@@ -1036,7 +1036,7 @@
   "sent_ts": null
  },
  {
-  "name": "Мастер-классы для взрослых",
+  "name": "Lovart",
   "site": "https://lovart.ru",
   "email": null,
   "phone": null,
@@ -1056,7 +1056,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездной тимбилдинг",
+  "name": "Everdis",
   "site": "https://everdis.ru",
   "email": null,
   "phone": null,
@@ -1066,7 +1066,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация мероприятий под ключ",
+  "name": "Iskrahall",
   "site": "https://iskrahall.ru",
   "email": "info@iskrahall.ru",
   "phone": null,
@@ -1076,7 +1076,7 @@
   "sent_ts": null
  },
  {
-  "name": "Тимбилдинг",
+  "name": "Prostranstvo",
   "site": "https://prostranstvo.team",
   "email": "shirokova@prostranstvo.team",
   "phone": null,
@@ -1086,7 +1086,7 @@
   "sent_ts": null
  },
  {
-  "name": "Тимбилдинг для компаний",
+  "name": "Lazertag",
   "site": "https://lazertag.zone",
   "email": null,
   "phone": null,
@@ -1096,7 +1096,7 @@
   "sent_ts": null
  },
  {
-  "name": "Выездной тимбилдинг для компаний",
+  "name": "Doctorteam",
   "site": "https://doctorteam.ru",
   "email": "info@doctorteam.ru",
   "phone": null,
@@ -1146,7 +1146,7 @@
   "sent_ts": null
  },
  {
-  "name": "Корпоративы, Лазертаг, лазертаг",
+  "name": "Station2025",
   "site": "https://station2025.ru",
   "email": "info@station2025.ru",
   "phone": null,
@@ -1156,7 +1156,7 @@
   "sent_ts": null
  },
  {
-  "name": "Арт-корпоратив",
+  "name": "Blacksart",
   "site": "https://blacksart.ru",
   "email": "info@blacks-art.ru",
   "phone": null,
@@ -1166,7 +1166,7 @@
   "sent_ts": null
  },
  {
-  "name": "Организация и проведение мастер-классов",
+  "name": "Event Mart",
   "site": "https://event-mart.ru",
   "email": "events@travelmart.ru",
   "phone": null,
@@ -1196,7 +1196,7 @@
   "sent_ts": null
  },
  {
-  "name": "Деловой туризм с",
+  "name": "Party Paritet",
   "site": "https://party-paritet.com",
   "email": "info@party-paritet.com",
   "phone": null,
