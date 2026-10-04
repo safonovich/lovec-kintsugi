@@ -1,0 +1,48 @@
+name: Replenish
+
+# Пополнение базы лидов. Отдельное задание: основной прогон не трогает,
+# только дописывает новых лидов, если запас просел ниже порога из business.toml.
+
+on:
+  schedule:
+    - cron: "0 8,16 * * *"     # дважды в сутки, 10:00 и 18:00 МСК
+  workflow_dispatch:            # ручной запуск кнопкой
+
+concurrency:
+  group: replenish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Установка зависимостей
+        run: pip install -r requirements.txt
+
+      - name: Пополнение базы
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
+          TG_CHAT_ID: ${{ secrets.TG_CHAT_ID }}
+        run: python scripts/replenish_run.py
+
+      - name: Сохранить базу
+        run: |
+          git config user.name "replenish-bot"
+          git config user.email "replenish@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || (git commit -m "replenish: $(date -u +%F_%H:%M)" && git pull --rebase && git push)
+
+      - name: Прогнать тесты
+        run: python -m unittest discover -s tests
