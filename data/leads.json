@@ -735,33 +735,34 @@
   "name": "Novikovspace",
   "site": "https://novikovspace.com",
   "email": "school@novikovschool.com",
-  "phone": null,
-  "tg": null,
+  "phone": "+79057888915",
+  "tg": "@itsnovikovschool",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791205103.4483495
  },
  {
   "id": "jazhda",
   "name": "Jazhda",
   "site": "https://jazhda.ru",
   "email": "art@jazhda.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74993504743",
+  "tg": "@jazhda_tvorchestva",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791205721.0190768,
+  "wa": "+79067963171"
  },
  {
   "id": "prointeractive",
   "name": "Pro Interactive",
   "site": "https://pro-interactive.ru",
   "email": "info@pro-interactive.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74957771262",
+  "tg": "@ProinterBot",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791206342.3291848
  },
  {
   "id": "artscool",
@@ -823,11 +824,12 @@
   "name": "Avs Events",
   "site": "https://avs-events.ru",
   "email": "mail@avshow.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74991100031",
+  "tg": "@avshowru",
   "note": "найдено поиском: агентство делового туризма и мероприятий Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791206959.1443713,
+  "wa": "+79661579916"
  },
  {
   "id": "bontour",
