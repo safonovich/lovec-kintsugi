@@ -1,0 +1,38 @@
+name: FixIds
+
+# Ремонт базы: проставить id лидам, у которых его нет.
+# Поиск добавляет записи без id, а бот по нему строит справочник и падает.
+# Задание дешёвое (секунды) и безопасное: существующие id не трогает.
+
+on:
+  schedule:
+    - cron: "25 * * * *"        # каждый час, за пять минут до круглого
+  workflow_dispatch:
+
+concurrency:
+  group: fixids
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Проставить id
+        run: python scripts/fix_ids.py
+
+      - name: Сохранить базу
+        run: |
+          git config user.name "fixids-bot"
+          git config user.email "fixids@users.noreply.github.com"
+          git add data/
+          git diff --cached --quiet || (git commit -m "fix_ids: $(date -u +%F_%H:%M)" && git pull --rebase && git push)
