@@ -1,7 +1,7 @@
-"""Кнопки: забираем нажатия через getUpdates и выполняем действия.
+"""Кнопки: разбираем нажатия и выполняем действия.
 s|<sk> — отправить КП на email, x|<sk> — пропустить.
 Плюс кнопки-меню: «📇 Прислать карточку» и «🔄 Обновить базу».
-У бота НЕ должен стоять webhook (боты из BotFather по умолчанию без него)."""
+Нажатие приходит либо от приёмника (webhook), либо опросом getUpdates — см. poll.py."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import time
 
 import requests
 
-from kt import mailer, notify
+from kt import mailer, notify, poll
 
 
 def _api(method: str) -> str:
@@ -38,40 +38,20 @@ def _mark(cq: dict, label: str) -> None:
         pass
 
 
-def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log):
+def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log,
+            injected: list[dict] | None = None):
     """Возвращает (новый offset, команды меню). pending и leads правятся на месте."""
     cmds: dict = {}
-    # Диагностика/самолечение: webhook блокирует getUpdates — снимаем его
-    try:
-        info = requests.get(_api("getWebhookInfo"), timeout=10).json().get("result", {})
-        if info.get("url"):
-            log(f"callbacks: ⚠️ на боте стоял webhook ({info['url'][:60]}…) — снимаю")
-            requests.get(_api("deleteWebhook"), timeout=10)
-        if info.get("pending_update_count"):
-            log(f"callbacks: в очереди Telegram {info['pending_update_count']} необработанных событий")
-        # Полная диагностика: видно, не забирает ли события кто-то другой
-        log(f"callbacks: webhook_info = {info}")
-    except Exception:
-        pass
-    try:
-        r = requests.get(_api("getUpdates"),
-                         params={"offset": offset, "timeout": 0}, timeout=25)
-        data = r.json()
-        if not data.get("ok"):
-            log(f"callbacks: Telegram отверг getUpdates — {data.get('description')}"
-                " (если тут ошибка 409/webhook — у бота настроен webhook,"
-                " нужен отдельный бот без webhook)")
+    if injected is None:
+        updates, ok = poll.poll(_api, offset, log)
+        if not ok:
             return offset, cmds
-        updates = data.get("result", [])
-    except Exception as e:
-        log(f"callbacks: getUpdates не сработал — {e}")
-        return offset, cmds
-
+    else:
+        # Событие принёс приёмник: Telegram уже отдал его webhook-ом,
+        # getUpdates на него больше не ответит.
+        updates = list(injected)
     if updates:
         log(f"callbacks: получено событий: {len(updates)}")
-    else:
-        log(f"callbacks: очередь пуста (offset={offset}) — если кнопки жали "
-            "только что, события забирает другой процесс с этим же токеном")
     by_id = {a["id"]: a for a in leads}
     new_offset = offset
     for u in updates:
