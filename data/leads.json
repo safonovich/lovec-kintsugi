@@ -669,11 +669,11 @@
   "name": "Eventaptvisit",
   "site": "https://eventaptvisit.ru",
   "email": "info@eventaptvisit.ru",
-  "phone": null,
+  "phone": "+74959237010",
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791202357.6580029
  },
  {
   "id": "svyaziagency",
@@ -691,22 +691,22 @@
   "name": "Elevent",
   "site": "https://elevent.one",
   "email": "info@elevent.one",
-  "phone": null,
-  "tg": null,
+  "phone": "+74991304727",
+  "tg": "@elevent_one",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791202975.4532115
  },
  {
   "id": "nkproject",
   "name": "Nk Project",
   "site": "https://nk-project.com",
   "email": "info@nktrans-group.ru",
-  "phone": null,
+  "phone": "+74953691771",
   "tg": null,
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791203606.6625814
  },
  {
   "id": "karyselidey",
@@ -724,11 +724,11 @@
   "name": "Art Active24",
   "site": "https://art-active24.ru",
   "email": "info@art-active24.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74950326750",
+  "tg": "@artactive24",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791204227.5770805
  },
  {
   "id": "novikovspace",
@@ -1292,6 +1292,45 @@
   "segment": "company",
   "city": "Москва",
   "note": "кандидат от нейронки, сайт проверен · Системный интегратор и IT-консалтинг, развитая корпоративная культура",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "luxoft",
+  "name": "Luxoft",
+  "site": "https://www.luxoft.com",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Международная IT-консалтинговая компания с офисом в Москве",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "bcs",
+  "name": "БКС Мир инвестиций",
+  "site": "https://www.bcs.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Финтех-компания с развитым HR-направлением",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "dreamteam",
+  "name": "Dream Team",
+  "site": "https://www.dreamteam.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "event",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Агентство корпоративных мероприятий и тимбилдингов",
   "status": "new",
   "sent_ts": null
  }
