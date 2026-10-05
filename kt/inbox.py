@@ -82,6 +82,9 @@ def _match(addr: str, leads: list[dict]):
     addr = addr.lower().strip()
     if not addr or "@" not in addr:
         return None
+    own = os.environ.get("SMTP_USER", "").lower().strip()
+    if own and addr == own:      # наш собственный ящик — это не лид
+        return None
     dom = addr.split("@")[-1]
     active = [a for a in leads
               if a.get("email") and a.get("status") in ("sent", "replied")]
@@ -148,8 +151,10 @@ def check(leads: list[dict], pending: dict, last_uid: int, cfg: dict, log) -> in
             msg = email.message_from_bytes(md[0][1])
         except Exception:
             continue
-        if msg.get("X-Lovec-Kintsugi") or msg.get("X-Lovec-FPV"):
-            continue                     # письма ботов (свои и соседа) — пропускаем
+        # Письмо любого из наших ботов (у каждого своя метка X-Lovec-*):
+        # это не ответ компании, а наше же письмо, попавшее себе во входящие.
+        if any(h.lower().startswith("x-lovec-") for h in msg.keys()):
+            continue
         from_addr = email.utils.parseaddr(msg.get("From", ""))[1]
         lead = _match(from_addr, leads)
         if not lead:
