@@ -590,11 +590,11 @@
   "name": "Ивент-агентство",
   "site": "https://av55.ru",
   "email": "info@av55.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951281029",
+  "tg": "@aventura_events",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791189651.8722754
  },
  {
   "id": "laevent",
