@@ -601,11 +601,12 @@
   "name": "Event-агентство LA.Event",
   "site": "https://la-event.ru",
   "email": "la.event@mail.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79100098805",
+  "tg": "@LA_EVENT_MSK",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791192434.8841348,
+  "wa": "+79100098805"
  },
  {
   "id": "prpartner",
@@ -634,22 +635,23 @@
   "name": "Art Enot",
   "site": "https://art-enot.ru",
   "email": "zakaz@art-enot.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79998625000",
+  "tg": "@Art_Enot_ru",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791193054.5111911,
+  "wa": "+79998625000"
  },
  {
   "id": "eventumpremo",
   "name": "Eventum Premo",
   "site": "https://eventum-premo.ru",
   "email": "go@eventum-premo.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74957858446",
+  "tg": "@EPigraphMag",
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791193669.2601533
  },
  {
   "id": "eventcatalog",
@@ -659,8 +661,8 @@
   "phone": null,
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791194285.9569464
  },
  {
   "id": "eventaptvisit",
