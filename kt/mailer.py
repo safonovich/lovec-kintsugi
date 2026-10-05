@@ -38,6 +38,12 @@ def send(to: str, subject: str, body: str, cfg: dict, log,
     if not e.get("enabled") or not user or not pwd:
         log("mailer: SMTP не настроен (секреты SMTP_USER/SMTP_PASS)")
         return False
+    # Свой же ящик: это тест-лид, а не клиент. Письмо себе ложится во
+    # входящие, и бот принимает его за ответ компании — так письма одного
+    # бизнеса и попадали в переписку другого.
+    if to.lower() == user.lower():
+        log(f"mailer: {to} — это наш собственный ящик, письмо не отправляю")
+        return False
 
     msg = EmailMessage()
     msg["From"] = formataddr((cfg["kp"]["author_name"], user))
