@@ -1266,5 +1266,31 @@
   "note": "найдено поиском: агентство делового туризма и мероприятий Москва",
   "status": "new",
   "sent_ts": null
+ },
+ {
+  "id": "raiffeisen",
+  "name": "Raiffeisen Bank",
+  "site": "https://www.raiffeisen.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Крупный финтех-банк с активной HR-функцией и тимбилдингами",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "id": "croc",
+  "name": "КРОК",
+  "site": "https://www.croc.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "segment": "company",
+  "city": "Москва",
+  "note": "кандидат от нейронки, сайт проверен · Системный интегратор и IT-консалтинг, развитая корпоративная культура",
+  "status": "new",
+  "sent_ts": null
  }
 ]
