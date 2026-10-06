@@ -1754,5 +1754,25 @@
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
   "status": "new",
   "sent_ts": null
+ },
+ {
+  "name": "Mesta",
+  "site": "https://mesta.app",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null
+ },
+ {
+  "name": "Bebeshka",
+  "site": "https://bebeshka.info",
+  "email": "support@bebeshka.info",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null
  }
 ]
