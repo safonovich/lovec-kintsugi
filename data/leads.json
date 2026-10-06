@@ -1756,6 +1756,7 @@
   "sent_ts": null
  },
  {
+  "id": "mesta",
   "name": "Mesta",
   "site": "https://mesta.app",
   "email": null,
@@ -1766,6 +1767,7 @@
   "sent_ts": null
  },
  {
+  "id": "bebeshka",
   "name": "Bebeshka",
   "site": "https://bebeshka.info",
   "email": "support@bebeshka.info",
