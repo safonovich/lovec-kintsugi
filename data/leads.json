@@ -936,11 +936,11 @@
   "name": "Event-агентство",
   "site": "https://event-fiesta.ru",
   "email": "info@event-fiesta.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74957892604",
+  "tg": "@eventfiesta",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791311446.0538073
  },
  {
   "id": "mmcatering",
@@ -958,11 +958,11 @@
   "name": "Eventcentrum",
   "site": "https://eventcentrum.ru",
   "email": "info@btrnb.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74996486221",
+  "tg": "@Volgarin777",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791312067.325946
  },
  {
   "id": "moscow",
@@ -980,11 +980,12 @@
   "name": "Prazdnikon",
   "site": "https://prazdnikon.ru",
   "email": "info@prazdnikon.ru",
-  "phone": null,
+  "phone": "+79263837320",
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791312696.7169793,
+  "wa": "+79263837320"
  },
  {
   "id": "proconcert",
