@@ -869,11 +869,11 @@
   "name": "Zabludshie",
   "site": "https://zabludshie.ru",
   "email": "info@zabludshie.com",
-  "phone": null,
-  "tg": null,
+  "phone": "+74959715550",
+  "tg": "@zabludshiie",
   "note": "найдено поиском: организация новогоднего корпоратива Москва агентство",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791289440.4642413
  },
  {
   "id": "kuptsova",
@@ -902,33 +902,34 @@
   "name": "Izum Teatr",
   "site": "https://izum-teatr.ru",
   "email": "hello@izum-teatr.ru",
-  "phone": null,
+  "phone": "+79385406199",
   "tg": null,
   "note": "найдено поиском: организация новогоднего корпоратива Москва агентство",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791290062.3394127
  },
  {
   "id": "berryandmarry",
   "name": "Berryandmarry",
   "site": "https://berryandmarry.com",
   "email": "order@berryandmarry.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79055050002",
+  "tg": "@berryandmarry",
   "note": "найдено поиском: корпоративные подарки ручной работы Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791290682.469088,
+  "wa": "+79055050002"
  },
  {
   "id": "aviacenter",
   "name": "Aviacenter",
   "site": "https://aviacenter.ru",
   "email": "subagent@aviacenter.ru",
-  "phone": null,
+  "phone": "+74959807323",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791291302.01626
  },
  {
   "id": "eventfiesta",
