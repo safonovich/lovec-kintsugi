@@ -1779,6 +1779,7 @@
   "sent_ts": null
  },
  {
+  "id": "vkvideo",
   "name": "Vkvideo",
   "site": "https://vkvideo.ru",
   "email": null,
@@ -1789,6 +1790,7 @@
   "sent_ts": null
  },
  {
+  "id": "proffitime",
   "name": "Proffi Time",
   "site": "https://proffi-time.ru",
   "email": "its@redesign-plus.ru",
@@ -1799,6 +1801,7 @@
   "sent_ts": null
  },
  {
+  "id": "cube",
   "name": "CUBE",
   "site": "https://cube.moscow",
   "email": "info@cube.moscow",
