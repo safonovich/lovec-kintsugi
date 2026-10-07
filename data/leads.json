@@ -992,11 +992,12 @@
   "name": "Proconcert",
   "site": "https://proconcert.ru",
   "email": "info@proconcert.ru",
-  "phone": null,
+  "phone": "+74959974764",
   "tg": null,
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791375391.421501,
+  "wa": "+79197849447"
  },
  {
   "id": "artevent24",
@@ -1006,30 +1007,30 @@
   "phone": null,
   "tg": null,
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791376013.6433318
  },
  {
   "id": "wedwed",
   "name": "Wedwed",
   "site": "https://wedwed.ru",
   "email": "info@wedwed.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951487258",
+  "tg": "@wedwed_ru",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791376637.4137836
  },
  {
   "id": "msk2",
   "name": "MSK",
   "site": "https://msk.tvorilnya.ru",
   "email": "info@tvorilnya.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951099003",
+  "tg": "@tvorilnya_bot",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791377253.4033651
  },
  {
   "id": "33udovolstviya",
