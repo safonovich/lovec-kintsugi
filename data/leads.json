@@ -1813,6 +1813,7 @@
   "sent_ts": null
  },
  {
+  "id": "orgpage",
   "name": "Orgpage",
   "site": "https://orgpage.ru",
   "email": null,
@@ -1823,6 +1824,7 @@
   "sent_ts": null
  },
  {
+  "id": "belyslon",
   "name": "Арт-студия \"Белый слон\"",
   "site": "https://bely-slon.ru",
   "email": "info@bely-slon.ru",
@@ -1833,6 +1835,7 @@
   "sent_ts": null
  },
  {
+  "id": "studiabonbon",
   "name": "Творческая студия Bon-Bon",
   "site": "https://studiabonbon.tilda.ws",
   "email": null,
@@ -1843,6 +1846,7 @@
   "sent_ts": null
  },
  {
+  "id": "bambiland",
   "name": "Bambi Land",
   "site": "https://bambi-land.ru",
   "email": null,
