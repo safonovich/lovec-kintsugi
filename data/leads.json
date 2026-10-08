@@ -1860,6 +1860,7 @@
   "sent_ts": null
  },
  {
+  "id": "artlabshkola",
   "name": "Artlab Shkola",
   "site": "https://artlab-shkola.ru",
   "email": null,
@@ -1870,6 +1871,7 @@
   "sent_ts": null
  },
  {
+  "id": "irishman",
   "name": "Irishman",
   "site": "https://irishman.ru",
   "email": "example@site.ru",
@@ -1880,6 +1882,7 @@
   "sent_ts": null
  },
  {
+  "id": "artris",
   "name": "Art Ris",
   "site": "https://art-ris.ru",
   "email": null,
@@ -1890,6 +1893,7 @@
   "sent_ts": null
  },
  {
+  "id": "livemaster",
   "name": "Livemaster",
   "site": "https://livemaster.ru",
   "email": null,
@@ -1900,6 +1904,7 @@
   "sent_ts": null
  },
  {
+  "id": "flymusic",
   "name": "Flymusic",
   "site": "https://flymusic.ru",
   "email": null,
