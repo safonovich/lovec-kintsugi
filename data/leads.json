@@ -1037,44 +1037,47 @@
   "name": "33Udovolstviya",
   "site": "https://33udovolstviya.ru",
   "email": "zakaz@33udovolstviya.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74957409637",
+  "tg": "@udovolstviya33",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791462396.294028,
+  "wa": "+79263533304"
  },
  {
   "id": "vkusoterria",
   "name": "Vkusoterria",
   "site": "https://vkusoterria.ru",
   "email": "guest@vkusoterria.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79671330601",
+  "tg": "@VkusCavaProshaker",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791463016.8942394,
+  "wa": "+79671330601"
  },
  {
   "id": "wowpovod",
   "name": "Wowpovod",
   "site": "https://wowpovod.ru",
   "email": "event@wowpovod.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951336560",
+  "tg": "@SkazkaOP",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791463629.7986476
  },
  {
   "id": "barstreet",
   "name": "Bar Street",
   "site": "https://bar-street.ru",
   "email": "info@bar-street.ru",
-  "phone": null,
+  "phone": "+74953746162",
   "tg": null,
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791464243.962208,
+  "wa": "+79771197255"
  },
  {
   "id": "xpresent",
