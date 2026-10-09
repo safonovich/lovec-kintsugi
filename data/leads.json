@@ -1921,5 +1921,49 @@
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
   "status": "new",
   "sent_ts": null
+ },
+ {
+  "name": "School Himki",
+  "site": "https://school-himki.ru",
+  "email": "info@school-himki.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "schoolhimki"
+ },
+ {
+  "name": "Pro Mesto",
+  "site": "https://pro-mesto.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "promesto"
+ },
+ {
+  "name": "Speedrent",
+  "site": "https://speedrent.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "speedrent"
+ },
+ {
+  "name": "Christopherart",
+  "site": "https://christopherart.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "christopherart"
  }
 ]
