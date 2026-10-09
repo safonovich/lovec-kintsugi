@@ -127,6 +127,27 @@ def _settings(cfg: dict) -> dict:
 
 # ───────────────────────────── пополнение ─────────────────────────────
 
+def _new_id(cand: dict, leads: list[dict]) -> str:
+    """id из домена сайта — тот же приём, что в scripts/fix_ids.py.
+
+    Без id по лиду не нажать кнопку: карточка приходит, а бот её не находит.
+    Раньше id проставлялся только почасовым fix_ids, и свежий лид до часа
+    висел мёртвым. Проставляем сразу при добавлении.
+    """
+    base = re.sub(r"[^a-z0-9]+", "",
+                  normalize_domain(cand.get("site")).split(".")[0])
+    if not base:
+        base = re.sub(r"[^a-z0-9]+", "", (cand.get("name") or "").lower())[:20]
+    base = base[:20] or "lead"
+    taken = {(x.get("id") or "") for x in leads}
+    if base not in taken:
+        return base
+    n = 2
+    while f"{base}{n}" in taken:
+        n += 1
+    return f"{base}{n}"
+
+
 def add_unique(leads: list[dict], candidates: list[dict],
                index: set[str] | None = None, log=print) -> int:
     """Дописать в базу только тех, кого там ещё нет. Вернуть сколько добавили.
@@ -142,6 +163,7 @@ def add_unique(leads: list[dict], candidates: list[dict],
             continue
         if is_duplicate(cand, index):
             continue
+        cand.setdefault("id", _new_id(cand, leads))
         cand.setdefault("status", "new")
         cand.setdefault("sent_ts", None)
         leads.append(cand)
