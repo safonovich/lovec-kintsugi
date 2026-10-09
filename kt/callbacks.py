@@ -52,7 +52,9 @@ def process(pending: dict, leads: list[dict], offset: int, cfg: dict, log,
         updates = list(injected)
     if updates:
         log(f"callbacks: получено событий: {len(updates)}")
-    by_id = {a["id"]: a for a in leads}
+    # Лид без id — свежий, из Replenish: fix_ids проставит его в ближайший час.
+    # Нажать на него всё равно нельзя, но и ронять из-за него весь прогон незачем.
+    by_id = {a["id"]: a for a in leads if a.get("id")}
     new_offset = offset
     for u in updates:
         new_offset = max(new_offset, u["update_id"] + 1)
