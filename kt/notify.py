@@ -116,10 +116,19 @@ def send_reply_card(lead: dict, incoming: str, draft: str, sk: str, log) -> None
         log(f"telegram(reply): не отправилось — {e}")
 
 
-def send_service(text: str, log) -> None:
+# Рутинный отчёт приходит без звука: письмо ушло, фоллоу-ап, «готово».
+# Со звуком — всё остальное: ⚠️ ошибки, 📭 пустая база, 📨 ответ клиента.
+# Неизвестное сообщение лучше показать со звуком, чем проглотить молча.
+QUIET_PREFIXES = ("✉️", "📮", "✅", "📊")
+
+
+def send_service(text: str, log, silent: bool | None = None) -> None:
+    if silent is None:
+        silent = text.lstrip().startswith(QUIET_PREFIXES)
     try:
         requests.post(_api("sendMessage"), json={
             "chat_id": _chat_id(), "text": text,
-            "disable_web_page_preview": True}, timeout=20)
+            "disable_web_page_preview": True,
+            "disable_notification": silent}, timeout=20)
     except Exception as e:
         log(f"telegram(service): {e}")
