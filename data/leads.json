@@ -701,7 +701,8 @@
   "tg": "@elevent_one",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
-  "sent_ts": 1791202975.4532115
+  "sent_ts": 1791202975.4532115,
+  "followup_ts": 1791570378.7785532
  },
  {
   "id": "nkproject",
@@ -712,7 +713,8 @@
   "tg": null,
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
-  "sent_ts": 1791203606.6625814
+  "sent_ts": 1791203606.6625814,
+  "followup_ts": 1791570381.1127648
  },
  {
   "id": "karyselidey",
@@ -734,7 +736,8 @@
   "tg": "@artactive24",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
-  "sent_ts": 1791204227.5770805
+  "sent_ts": 1791204227.5770805,
+  "followup_ts": 1791570382.6863356
  },
  {
   "id": "novikovspace",
@@ -745,7 +748,8 @@
   "tg": "@itsnovikovschool",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
-  "sent_ts": 1791205103.4483495
+  "sent_ts": 1791205103.4483495,
+  "followup_ts": 1791570385.204881
  },
  {
   "id": "jazhda",
@@ -757,7 +761,8 @@
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
   "sent_ts": 1791205721.0190768,
-  "wa": "+79067963171"
+  "wa": "+79067963171",
+  "followup_ts": 1791570386.6740847
  },
  {
   "id": "prointeractive",
@@ -768,7 +773,8 @@
   "tg": "@ProinterBot",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
-  "sent_ts": 1791206342.3291848
+  "sent_ts": 1791206342.3291848,
+  "followup_ts": 1791570388.3915305
  },
  {
   "id": "artscool",
@@ -835,7 +841,8 @@
   "note": "найдено поиском: агентство делового туризма и мероприятий Москва",
   "status": "sent",
   "sent_ts": 1791206959.1443713,
-  "wa": "+79661579916"
+  "wa": "+79661579916",
+  "followup_ts": 1791570389.9292133
  },
  {
   "id": "bontour",
@@ -1180,11 +1187,12 @@
   "name": "Mangogames",
   "site": "https://mangogames.ru",
   "email": "info@mangogames.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74952550244",
+  "tg": "@mangogamess",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791570404.6739106,
+  "wa": "+79160044537"
  },
  {
   "id": "triumphagency",
@@ -1224,33 +1232,34 @@
   "name": "Station2025",
   "site": "https://station2025.ru",
   "email": "info@station2025.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951204049",
+  "tg": "@Station2025",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791571024.112393
  },
  {
   "id": "blacksart",
   "name": "Blacksart",
   "site": "https://blacksart.ru",
   "email": "info@blacks-art.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74950232673",
+  "tg": "@blacks_art_moscow",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791571643.5479836,
+  "wa": "+74950232673"
  },
  {
   "id": "eventmart",
   "name": "Event Mart",
   "site": "https://event-mart.ru",
   "email": "events@travelmart.ru",
-  "phone": null,
+  "phone": "+78007008654",
   "tg": null,
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791572257.0676594
  },
  {
   "id": "studioartmyata",
