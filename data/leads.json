@@ -594,7 +594,8 @@
   "tg": "@aventura_events",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
   "status": "sent",
-  "sent_ts": 1791189651.8722754
+  "sent_ts": 1791189651.8722754,
+  "followup_ts": 1791548136.3062878
  },
  {
   "id": "laevent",
@@ -606,7 +607,8 @@
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
   "status": "sent",
   "sent_ts": 1791192434.8841348,
-  "wa": "+79100098805"
+  "wa": "+79100098805",
+  "followup_ts": 1791548139.365903
  },
  {
   "id": "prpartner",
@@ -640,7 +642,8 @@
   "note": "найдено поиском: организация тимбилдинга Москва компания",
   "status": "sent",
   "sent_ts": 1791193054.5111911,
-  "wa": "+79998625000"
+  "wa": "+79998625000",
+  "followup_ts": 1791548141.4268806
  },
  {
   "id": "eventumpremo",
@@ -651,7 +654,8 @@
   "tg": "@EPigraphMag",
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
   "status": "sent",
-  "sent_ts": 1791193669.2601533
+  "sent_ts": 1791193669.2601533,
+  "followup_ts": 1791548144.283762
  },
  {
   "id": "eventcatalog",
@@ -662,7 +666,8 @@
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
   "status": "sent",
-  "sent_ts": 1791194285.9569464
+  "sent_ts": 1791194285.9569464,
+  "followup_ts": 1791548146.0656598
  },
  {
   "id": "eventaptvisit",
@@ -673,7 +678,8 @@
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
   "status": "sent",
-  "sent_ts": 1791202357.6580029
+  "sent_ts": 1791202357.6580029,
+  "followup_ts": 1791548147.9488673
  },
  {
   "id": "svyaziagency",
@@ -1106,11 +1112,12 @@
   "name": "Artfeya",
   "site": "https://artfeya.ru",
   "email": "info@artfeya.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74959237997",
+  "tg": "@artfeya",
   "note": "найдено поиском: творческие мастер-классы на корпоратив Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791548170.5714014,
+  "wa": "+79859237997"
  },
  {
   "id": "everdis",
@@ -1128,22 +1135,23 @@
   "name": "Iskrahall",
   "site": "https://iskrahall.ru",
   "email": "info@iskrahall.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79055472820",
+  "tg": "@iskrahall",
   "note": "найдено поиском: event агентство тимбилдинг под ключ Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791548788.4067454,
+  "wa": "+79055472820"
  },
  {
   "id": "prostranstvo",
   "name": "Prostranstvo",
   "site": "https://prostranstvo.team",
   "email": "shirokova@prostranstvo.team",
-  "phone": null,
+  "phone": "+74950250235",
   "tg": null,
   "note": "найдено поиском: event агентство тимбилдинг под ключ Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791549407.9523468
  },
  {
   "id": "lazertag",
@@ -1161,11 +1169,11 @@
   "name": "Doctorteam",
   "site": "https://doctorteam.ru",
   "email": "info@doctorteam.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74993408232",
+  "tg": "@DoctorTeam1_bot",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791550029.3970373
  },
  {
   "id": "mangogames",
