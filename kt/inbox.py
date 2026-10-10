@@ -124,12 +124,12 @@ _ADDR_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
 
 
 def _bounce_addresses(msg) -> list[str]:
-    """Если это отчёт о недоставке — адреса, которые не приняли письмо.
+    """Если это ОКОНЧАТЕЛЬНЫЙ отказ — адреса, которые не приняли письмо.
 
-    Нормальный отбой приходит как multipart/report: внутри часть
-    message/delivery-status с полем Final-Recipient. Часть почтовиков шлёт
-    только текст — тогда собираем все адреса из тела, а пометим потом
-    лишь тот, который есть в базе.
+    Почтовик шлёт два похожих отчёта. «Delay» (Action: delayed, код 4.x.x) —
+    письмо ещё в пути, Gmail будет пробовать двое суток; такой лид трогать
+    нельзя. «Failure» (Action: failed, код 5.x.x) — адреса нет, это конец.
+    Считаем мёртвыми только вторые.
     """
     ctype = (msg.get("Content-Type") or "").lower()
     sender = (email.utils.parseaddr(msg.get("From", ""))[1] or "").lower()
@@ -137,6 +137,7 @@ def _bounce_addresses(msg) -> list[str]:
             or sender.startswith(("mailer-daemon@", "postmaster@"))):
         return []
     out: list[str] = []
+    seen_report = False
     try:
         for part in msg.walk():
             if part.get_content_type() != "message/delivery-status":
@@ -144,13 +145,21 @@ def _bounce_addresses(msg) -> list[str]:
             for block in part.get_payload():
                 raw = (block.get("Final-Recipient")
                        or block.get("Original-Recipient"))
-                if raw and ";" in str(raw):
+                if not raw or ";" not in str(raw):
+                    continue
+                seen_report = True
+                action = str(block.get("Action") or "").strip().lower()
+                status = str(block.get("Status") or "").strip()
+                if action == "failed" or status.startswith("5."):
                     out.append(str(raw).split(";", 1)[1].strip().strip("<>").lower())
     except Exception:
         pass
-    if not out:
-        out = [a.lower() for a in _ADDR_RE.findall(_body_text(msg))]
-    return out
+    if seen_report:
+        return out        # отчёт разобрали: пусто — значит задержка, не отказ
+    subj = (msg.get("Subject") or "").lower()
+    if "delay" in subj or "задерж" in subj:
+        return []
+    return [a.lower() for a in _ADDR_RE.findall(_body_text(msg))]
 
 
 def _mark_bounced(addrs: list[str], leads: list[dict], log) -> bool:
