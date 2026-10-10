@@ -131,6 +131,7 @@ JUNK_NAMES = {
     "о компании", "о нас", "главная страница", "каталог", "услуги", "недвижимость",
     "агентство недвижимости", "агентство", "сайт", "домой", "home", "contacts",
     "about", "menu", "меню", "новости", "вакансии",
+    "https", "http", "www", "index", "page", "страница",
 }
 
 
@@ -180,6 +181,63 @@ def clean_name(title: str, domain: str) -> str | None:
     return (base.upper() if len(base) <= 4 else base.title())[:120]
 
 
+# ── Живой ли домен ───────────────────────────────────────────────────
+# Письмо на несуществующий домен отбивается и портит репутацию ящика.
+# «Ящик не найден» так не поймать — это делает разбор отбоев в inbox.py.
+_MX_CACHE: dict[str, bool] = {}
+_DNS_OK: bool | None = None
+
+
+def _dns_works() -> bool:
+    """Отвечает ли DNS вообще.
+
+    Если в окружении DNS недоступен, проверка начнёт отбрасывать всех
+    подряд и база перестанет пополняться. Поэтому один раз сверяемся
+    с заведомо живым доменом: молчит — проверку не делаем вовсе.
+    """
+    global _DNS_OK
+    if _DNS_OK is None:
+        try:
+            import dns.resolver
+            r = dns.resolver.Resolver()
+            r.timeout = r.lifetime = 5.0
+            r.resolve("ya.ru", "MX")
+            _DNS_OK = True
+        except Exception:
+            _DNS_OK = False
+    return _DNS_OK
+
+
+def _accepts_mail(domain: str) -> bool:
+    """Принимает ли домен почту. При любом сомнении — да."""
+    dom = (domain or "").lower().strip(".")
+    if not dom or "." not in dom:
+        return False
+    if dom in _MX_CACHE:
+        return _MX_CACHE[dom]
+    if not _dns_works():
+        return True
+    try:
+        import dns.resolver
+        r = dns.resolver.Resolver()
+        r.timeout = r.lifetime = 5.0
+    except Exception:
+        _MX_CACHE[dom] = True
+        return True
+    try:
+        ok = bool(r.resolve(dom, "MX"))
+    except dns.resolver.NXDOMAIN:
+        ok = False
+    except dns.resolver.NoAnswer:
+        try:                       # без MX почта может идти на сам хост
+            ok = bool(r.resolve(dom, "A"))
+        except Exception:
+            ok = False
+    except Exception:
+        ok = True                  # таймаут или сбой сети — не наказываем лид
+    _MX_CACHE[dom] = ok
+    return ok
+
 def _usable_email(email: str) -> bool:
     e = email.lower()
     if any(p in e for p in BAD_EMAIL_PARTS):
@@ -193,7 +251,8 @@ def _usable_email(email: str) -> bool:
 
 def _pick_email(emails: list[str], domain: str) -> str | None:
     """Почта на домене компании лучше, чем сборная солянка с чужих доменов."""
-    good = [e for e in dict.fromkeys(emails) if _usable_email(e)]
+    good = [e for e in dict.fromkeys(emails)
+            if _usable_email(e) and _accepts_mail(e.rsplit("@", 1)[-1])]
     if not good:
         return None
     own = [e for e in good if e.lower().endswith("@" + domain)]
