@@ -1277,22 +1277,24 @@
   "name": "Pocketevent",
   "site": "https://pocketevent.ru",
   "email": "info@pocketevent.ru",
-  "phone": null,
+  "phone": "+79060824606",
   "tg": null,
   "note": "найдено поиском: event агентство тимбилдинг под ключ Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791632009.5426788,
+  "wa": "+79060824606"
  },
  {
   "id": "partyparitet",
   "name": "Party Paritet",
   "site": "https://party-paritet.com",
   "email": "info@party-paritet.com",
-  "phone": null,
-  "tg": null,
+  "phone": "+79214102121",
+  "tg": "@paritetevents",
   "note": "найдено поиском: агентство делового туризма и мероприятий Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791632626.6426387,
+  "wa": "+79219519282"
  },
  {
   "id": "raiffeisen",
@@ -1375,22 +1377,23 @@
   "name": "Refree",
   "site": "https://refree.ru",
   "email": "info@refree.ru",
-  "phone": null,
+  "phone": "+74957621712",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791633247.8139515
  },
  {
   "id": "okevent",
   "name": "Event-агентство OK Event",
   "site": "https://ok-event.ru",
   "email": "sales@ok-event.ru",
-  "phone": null,
+  "phone": "+79608184717",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791633858.0043254,
+  "wa": "+79608184717"
  },
  {
   "id": "bmwedding",
