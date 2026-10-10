@@ -10,6 +10,7 @@ import email.utils
 import imaplib
 import json
 import os
+import re
 import time
 
 from kt import llm, notify
@@ -119,6 +120,57 @@ def _draft(lead: dict, incoming: str, cfg: dict, log):
         return None
 
 
+_ADDR_RE = re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}")
+
+
+def _bounce_addresses(msg) -> list[str]:
+    """Если это отчёт о недоставке — адреса, которые не приняли письмо.
+
+    Нормальный отбой приходит как multipart/report: внутри часть
+    message/delivery-status с полем Final-Recipient. Часть почтовиков шлёт
+    только текст — тогда собираем все адреса из тела, а пометим потом
+    лишь тот, который есть в базе.
+    """
+    ctype = (msg.get("Content-Type") or "").lower()
+    sender = (email.utils.parseaddr(msg.get("From", ""))[1] or "").lower()
+    if not ("delivery-status" in ctype
+            or sender.startswith(("mailer-daemon@", "postmaster@"))):
+        return []
+    out: list[str] = []
+    try:
+        for part in msg.walk():
+            if part.get_content_type() != "message/delivery-status":
+                continue
+            for block in part.get_payload():
+                raw = (block.get("Final-Recipient")
+                       or block.get("Original-Recipient"))
+                if raw and ";" in str(raw):
+                    out.append(str(raw).split(";", 1)[1].strip().strip("<>").lower())
+    except Exception:
+        pass
+    if not out:
+        out = [a.lower() for a in _ADDR_RE.findall(_body_text(msg))]
+    return out
+
+
+def _mark_bounced(addrs: list[str], leads: list[dict], log) -> bool:
+    """Пометить лид мёртвым, чтобы больше на этот адрес не писать."""
+    own = os.environ.get("SMTP_USER", "").lower().strip()
+    for a in addrs:
+        if not a or a == own:
+            continue
+        for lead in leads:
+            if (lead.get("email") or "").lower() != a:
+                continue
+            if lead.get("status") != "bounced":
+                lead["status"] = "bounced"
+                log(f"inbox: отбой — {lead.get('name')} ({a}), больше не пишем")
+                notify.send_service(
+                    f"✉️ Адрес не принимает письма: {lead.get('name')} ({a}). "
+                    f"Пометил мёртвым, дожимать не будем.", log)
+            return True
+    return False
+
 def check(leads: list[dict], pending: dict, last_uid: int, cfg: dict, log) -> int:
     """Проверяет ящик, возвращает новый last_uid. leads/pending правятся на месте."""
     user = os.environ.get("SMTP_USER", "").strip()
@@ -154,6 +206,13 @@ def check(leads: list[dict], pending: dict, last_uid: int, cfg: dict, log) -> in
         # Письмо любого из наших ботов (у каждого своя метка X-Lovec-*):
         # это не ответ компании, а наше же письмо, попавшее себе во входящие.
         if any(h.lower().startswith("x-lovec-") for h in msg.keys()):
+            continue
+        # Отчёт о недоставке: адрес мёртв. Помечаем лид и идём дальше —
+        # это не ответ компании, отвечать тут некому.
+        bounced = _bounce_addresses(msg)
+        if bounced:
+            if not _mark_bounced(bounced, leads, log):
+                log(f"inbox: отбой с {bounced[0]} — в базе такого адреса нет")
             continue
         from_addr = email.utils.parseaddr(msg.get("From", ""))[1]
         lead = _match(from_addr, leads)
