@@ -31,7 +31,7 @@ import re
 #
 # Доступен тот, кому мы ещё не написали и кого не отбраковали.
 # ──────────────────────────────────────────────────────────────────────
-DONE_STATUSES = frozenset({"sent", "skipped", "replied"})
+DONE_STATUSES = frozenset({"sent", "skipped", "replied", "bounced"})
 
 DEFAULTS = {
     "min_new_leads": 40,
