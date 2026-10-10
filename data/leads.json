@@ -1977,5 +1977,93 @@
   "status": "new",
   "sent_ts": null,
   "id": "christopherart"
+ },
+ {
+  "name": "Stationvrn",
+  "site": "https://stationvrn.ru",
+  "email": "info@stationvrn.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "stationvrn"
+ },
+ {
+  "name": "Tomesto",
+  "site": "https://tomesto.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "tomesto"
+ },
+ {
+  "name": "Театральная студия",
+  "site": "https://ingenium.moscow",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "ingenium"
+ },
+ {
+  "name": "Khimki Prazdnik",
+  "site": "https://khimki-prazdnik.ru",
+  "email": "info@prazdnikhimki.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "khimkiprazdnik"
+ },
+ {
+  "name": "Moscowcountryclub",
+  "site": "https://moscowcountryclub.ru",
+  "email": "reception@mcc.updk.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "moscowcountryclub"
+ },
+ {
+  "name": "Delispace",
+  "site": "https://delispace.ru",
+  "email": "info@delispace.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "delispace"
+ },
+ {
+  "name": "Meettroom",
+  "site": "https://meettroom.ru",
+  "email": "mail@meettroom.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "meettroom"
+ },
+ {
+  "name": "арт-пространства",
+  "site": "https://bash.today",
+  "email": "a@bash.today",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "bash"
  }
 ]
