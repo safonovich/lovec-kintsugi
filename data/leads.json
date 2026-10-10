@@ -886,7 +886,8 @@
   "tg": "@zabludshiie",
   "note": "найдено поиском: организация новогоднего корпоратива Москва агентство",
   "status": "sent",
-  "sent_ts": 1791289440.4642413
+  "sent_ts": 1791289440.4642413,
+  "followup_ts": 1791649328.9131336
  },
  {
   "id": "kuptsova",
@@ -919,7 +920,8 @@
   "tg": null,
   "note": "найдено поиском: организация новогоднего корпоратива Москва агентство",
   "status": "sent",
-  "sent_ts": 1791290062.3394127
+  "sent_ts": 1791290062.3394127,
+  "followup_ts": 1791649331.9678311
  },
  {
   "id": "berryandmarry",
@@ -931,7 +933,8 @@
   "note": "найдено поиском: корпоративные подарки ручной работы Москва компания",
   "status": "sent",
   "sent_ts": 1791290682.469088,
-  "wa": "+79055050002"
+  "wa": "+79055050002",
+  "followup_ts": 1791649334.3201365
  },
  {
   "id": "aviacenter",
@@ -942,7 +945,8 @@
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
   "status": "sent",
-  "sent_ts": 1791291302.01626
+  "sent_ts": 1791291302.01626,
+  "followup_ts": 1791649337.8256
  },
  {
   "id": "eventfiesta",
@@ -1433,11 +1437,11 @@
   "name": "Three Sixty",
   "site": "https://three-sixty.ru",
   "email": "info@360e.me",
-  "phone": null,
+  "phone": "+79854902626",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791649346.998851
  },
  {
   "id": "oldclub",
@@ -1458,30 +1462,31 @@
   "phone": null,
   "tg": null,
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791649959.0289688
  },
  {
   "id": "aaah",
   "name": "A A Ah",
   "site": "https://a-a-ah.ru",
   "email": "mail@a-a-ah.ru",
-  "phone": null,
+  "phone": "+74994951380",
   "tg": null,
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791650568.7809396
  },
  {
   "id": "msk3",
   "name": "Ивент-агентство Эддмо (Addmo)",
   "site": "https://msk.addmo-events.ru",
   "email": "info@addmo.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79370058703",
+  "tg": "@Kris_event_producer",
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791651180.758572,
+  "wa": "+79673665626"
  },
  {
   "id": "leventagency",
