@@ -1017,7 +1017,8 @@
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
   "sent_ts": 1791375391.421501,
-  "wa": "+79197849447"
+  "wa": "+79197849447",
+  "followup_ts": 1791737925.316818
  },
  {
   "id": "artevent24",
@@ -1028,7 +1029,8 @@
   "tg": null,
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
-  "sent_ts": 1791376013.6433318
+  "sent_ts": 1791376013.6433318,
+  "followup_ts": 1791737927.1405506
  },
  {
   "id": "wedwed",
@@ -1039,7 +1041,8 @@
   "tg": "@wedwed_ru",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
-  "sent_ts": 1791376637.4137836
+  "sent_ts": 1791376637.4137836,
+  "followup_ts": 1791737929.017612
  },
  {
   "id": "msk2",
@@ -1613,7 +1616,7 @@
   "phone": "+74996536005",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "sent",
+  "status": "bounced",
   "sent_ts": 1791719815.705892
  },
  {
@@ -1624,7 +1627,7 @@
   "phone": "+79691989238",
   "tg": "@goodnight_msk",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "sent",
+  "status": "bounced",
   "sent_ts": 1791720434.1138456
  },
  {
@@ -1654,33 +1657,34 @@
   "name": "студии",
   "site": "https://art-garazh.com",
   "email": "info@art-garazh.com",
-  "phone": null,
+  "phone": "+79150030577",
   "tg": null,
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791737937.3396993
  },
  {
   "id": "himki",
   "name": "Школа вокала в Химках",
   "site": "https://himki.art-fa.ru",
   "email": "info@art-fa.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79264238551",
+  "tg": "@artfa_russia",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791738543.928736,
+  "wa": "+79951183701"
  },
  {
   "id": "houseofarts",
   "name": "Арт-студия House of Arts",
   "site": "https://house-of-arts.ru",
   "email": "info@house-of-arts.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79687809233",
+  "tg": "@houseoffarts",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791739153.6543596
  },
  {
   "id": "taklegkoart",
@@ -1720,11 +1724,11 @@
   "name": "Nagornoe",
   "site": "https://nagornoe.sheremetevsky.ru",
   "email": "sales-n@sheremetevsky.ru",
-  "phone": null,
+  "phone": "+74986834051",
   "tg": null,
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791739762.167491
  },
  {
   "id": "events",
