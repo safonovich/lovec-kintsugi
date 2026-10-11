@@ -2077,5 +2077,49 @@
   "status": "new",
   "sent_ts": null,
   "id": "bash"
+ },
+ {
+  "name": "Банкеты",
+  "site": "https://elchico.ru",
+  "email": "info@elchico.me",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "elchico"
+ },
+ {
+  "name": "Vhachapuri",
+  "site": "https://vhachapuri.ru",
+  "email": "info@rfk.su",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "vhachapuri"
+ },
+ {
+  "name": "Planernoye",
+  "site": "https://planernoye.bron-hotel.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "planernoye"
+ },
+ {
+  "name": "Мушкино",
+  "site": "https://restmushkino.ru",
+  "email": "rest@mushkino.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "restmushkino"
  }
 ]
