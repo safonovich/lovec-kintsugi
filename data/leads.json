@@ -2125,5 +2125,93 @@
   "status": "new",
   "sent_ts": null,
   "id": "restmushkino"
+ },
+ {
+  "name": "Арт-клуб Маяк",
+  "site": "https://vk.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "vk"
+ },
+ {
+  "name": "Lodka2012",
+  "site": "https://lodka2012.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "lodka2012"
+ },
+ {
+  "name": "YACHT EVENT",
+  "site": "https://yacht-event.ru",
+  "email": "info@yacht-event.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "yachtevent"
+ },
+ {
+  "name": "Банкетные залы",
+  "site": "https://banket.life",
+  "email": "info@banket.life",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "banket"
+ },
+ {
+  "name": "Zalpanteon",
+  "site": "https://zalpanteon.ru",
+  "email": "info@zalpanteon.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "zalpanteon"
+ },
+ {
+  "name": "Banketnye Zaly Moskva",
+  "site": "https://banketnye-zaly-moskva.ru",
+  "email": "admin@banketnye-zaly-moskva.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "banketnyezalymoskva"
+ },
+ {
+  "name": "Burevestnik24",
+  "site": "https://burevestnik24.ru",
+  "email": "banket@burevestnik.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "burevestnik24"
+ },
+ {
+  "name": "Калина Кантри",
+  "site": "https://kalina-kantri.clients.site",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "kalinakantri"
  }
 ]
