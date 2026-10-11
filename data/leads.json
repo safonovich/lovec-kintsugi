@@ -1521,7 +1521,7 @@
   "phone": "+74953084543",
   "tg": "@darsy_event",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "sent",
+  "status": "bounced",
   "sent_ts": 1791708943.0659497,
   "wa": "+79998908992"
  },
@@ -1555,7 +1555,7 @@
   "phone": "+79670506549",
   "tg": "@prostovkusno_csstudio",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "sent",
+  "status": "bounced",
   "sent_ts": 1791709552.4153512,
   "wa": "+79099953185"
  },
@@ -1598,44 +1598,45 @@
   "name": "Iprazdnik",
   "site": "https://iprazdnik.com",
   "email": "hello@iprazdnik.com",
-  "phone": null,
-  "tg": null,
+  "phone": "+74957772568",
+  "tg": "@iPrazdnik_com",
   "note": "найдено поиском: творческие мастер-классы на корпоратив Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791719206.6083722,
+  "wa": "+74957772568"
  },
  {
   "id": "imarussia",
   "name": "iMARUSSIA!",
   "site": "https://imarussia.com",
   "email": "info@imarussia.com",
-  "phone": null,
+  "phone": "+74996536005",
   "tg": null,
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791719815.705892
  },
  {
   "id": "goodnight",
   "name": "Goodnight",
   "site": "https://goodnight.show",
   "email": "msk@goodnight.show",
-  "phone": null,
-  "tg": null,
+  "phone": "+79691989238",
+  "tg": "@goodnight_msk",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791720434.1138456
  },
  {
   "id": "artist",
   "name": "Artist",
   "site": "https://artist.ru",
   "email": "info@artist.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79606193327",
+  "tg": "@Artist_ru_channel",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791721044.6358416
  },
  {
   "id": "tainaya",
