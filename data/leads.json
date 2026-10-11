@@ -957,7 +957,8 @@
   "tg": "@eventfiesta",
   "note": "найдено поиском: event агентство Москва корпоративные мероприятия",
   "status": "sent",
-  "sent_ts": 1791311446.0538073
+  "sent_ts": 1791311446.0538073,
+  "followup_ts": 1791708322.6202242
  },
  {
   "id": "mmcatering",
@@ -979,7 +980,8 @@
   "tg": "@Volgarin777",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
   "status": "sent",
-  "sent_ts": 1791312067.325946
+  "sent_ts": 1791312067.325946,
+  "followup_ts": 1791708324.3952487
  },
  {
   "id": "moscow",
@@ -1002,7 +1004,8 @@
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
   "status": "sent",
   "sent_ts": 1791312696.7169793,
-  "wa": "+79263837320"
+  "wa": "+79263837320",
+  "followup_ts": 1791708326.0039928
  },
  {
   "id": "proconcert",
@@ -1504,22 +1507,23 @@
   "name": "Korpor",
   "site": "https://korpor.ru",
   "email": "info@korpor.ru",
-  "phone": null,
+  "phone": "+74958224262",
   "tg": null,
   "note": "найдено поиском: агентство корпоративных мероприятий Москва услуги",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791708332.828066
  },
  {
   "id": "darsywed",
   "name": "Darsy Wed",
   "site": "https://darsy-wed.ru",
   "email": "rakalupin@darsy-wed.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74953084543",
+  "tg": "@darsy_event",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791708943.0659497,
+  "wa": "+79998908992"
  },
  {
   "id": "provodimprazdniki",
@@ -1548,11 +1552,12 @@
   "name": "Prosto Vkusno",
   "site": "https://prosto-vkusno.com",
   "email": "main@prosto-vkusno.com",
-  "phone": null,
-  "tg": null,
+  "phone": "+79670506549",
+  "tg": "@prostovkusno_csstudio",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791709552.4153512,
+  "wa": "+79099953185"
  },
  {
   "id": "mastersclass",
@@ -1581,11 +1586,12 @@
   "name": "Kraskistudio",
   "site": "https://kraskistudio.ru",
   "email": "info@kraskistudio.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79652990099",
+  "tg": "@kraskistudio",
   "note": "найдено поиском: творческие мастер-классы на корпоратив Москва",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791710163.3776927,
+  "wa": "+79652990099"
  },
  {
   "id": "iprazdnik",
