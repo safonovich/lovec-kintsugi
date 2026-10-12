@@ -78,7 +78,7 @@ def _template(lead: dict, kp_cfg: dict) -> tuple[str, str]:
     return subject, body
 
 
-def make(lead: dict, site_text: str, cfg: dict, log) -> tuple[str, str]:
+def make(lead: dict, site_text: str, cfg: dict, log) -> tuple[str, str] | None:
     """Возвращает (subject, body)."""
     kp_cfg = cfg["kp"]
     system = SYSTEM.format(portfolio=kp_cfg["portfolio_url"],
@@ -91,13 +91,17 @@ def make(lead: dict, site_text: str, cfg: dict, log) -> tuple[str, str]:
             f"Сайт: {lead.get('site', '')}\n"
             f"Заметка: {lead.get('note', '')}\n"
             f"Справка с сайта: {site_text or 'нет данных'}")
+    # Шаблон — это осознанно выключенная нейронка, а не её молчание.
+    if not cfg.get("llm", {}).get("enabled", True):
+        return _template(lead, kp_cfg)
+
     txt = llm.chat(system, info, cfg, log)
     if not txt:
-        log("kp: LLM недоступен — шаблон")
-        return _template(lead, kp_cfg)
+        log("kp: LLM недоступен — письмо не пишем")
+        return None
     try:
         v = json.loads(txt[txt.find("{"):txt.rfind("}") + 1])
         return str(v["subject"])[:120], str(v["body"])
     except Exception as e:
-        log(f"kp: не разобрал ответ LLM ({e}) — шаблон")
-        return _template(lead, kp_cfg)
+        log(f"kp: не разобрал ответ LLM ({e}) — письмо не пишем")
+        return None
