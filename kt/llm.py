@@ -22,8 +22,15 @@ def _err_text(e: Exception) -> str:
     return f"{e}{body}"
 
 
+# Текст последней ошибки модели: чтобы в Telegram прилетело не «нет ответа»,
+# а то, что на самом деле сказал сервис — например «недостаточно средств».
+last_error = ""
+
+
 def chat(system: str, user: str, cfg: dict, log, max_tokens: int = 700) -> str | None:
     """Возвращает текст ответа модели или None (нет ключа/ошибка — fail-open)."""
+    global last_error
+    last_error = ""
     l = cfg.get("llm", {})
     key = (os.environ.get("LLM_API_KEY") or
            os.environ.get("ANTHROPIC_API_KEY") or "").strip()
@@ -43,9 +50,11 @@ def chat(system: str, user: str, cfg: dict, log, max_tokens: int = 700) -> str |
             data = r.json()
             if data.get("is_success") and data.get("response"):
                 return str(data["response"])
+            last_error = str(data.get("error_message") or data)[:300]
             log(f"llm(chad): {data.get('error_message') or data}")
             return None
         except Exception as e:
+            last_error = _err_text(e)[:300]
             log(f"llm(chad): {_err_text(e)}")
             return None
 
