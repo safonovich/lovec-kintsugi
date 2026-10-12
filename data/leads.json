@@ -1735,11 +1735,11 @@
   "name": "Events",
   "site": "https://events.pinskiy.co",
   "email": "events@pinskiy.co",
-  "phone": null,
+  "phone": "+79645549922",
   "tg": null,
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791785698.599737
  },
  {
   "id": "moscowmap",
@@ -1768,33 +1768,33 @@
   "name": "Зимний сад",
   "site": "https://restoran-zimniysad.ru",
   "email": "info@restoran-zimniysad.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79629388338",
+  "tg": "@victoriavedingcom",
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791786321.2966824
  },
  {
   "id": "restoran",
   "name": "Restoran",
   "site": "https://restoran.ru",
   "email": "reklama-msk@restoran.ru",
-  "phone": null,
+  "phone": "+79151060741",
   "tg": null,
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791786946.200425
  },
  {
   "id": "sabordelavida",
   "name": "банкетных залов",
   "site": "https://sabordelavida.ru",
   "email": "vip@delavida.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79262227122",
+  "tg": "@sabordelavida1905",
   "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791787564.2666674
  },
  {
   "id": "mesta",
