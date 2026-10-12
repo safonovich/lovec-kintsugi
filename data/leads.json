@@ -2217,5 +2217,93 @@
   "status": "new",
   "sent_ts": null,
   "id": "kalinakantri"
+ },
+ {
+  "name": "Kurkino",
+  "site": "https://kurkino.su",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "kurkino"
+ },
+ {
+  "name": "Restoran Mimi",
+  "site": "https://restoran-mimi.ru",
+  "email": "zakaz@restoran-mimi.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "restoranmimi"
+ },
+ {
+  "name": "Pogostite",
+  "site": "https://pogostite.ru",
+  "email": "info@pogostite.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "pogostite"
+ },
+ {
+  "name": "Eatout",
+  "site": "https://eatout.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "eatout"
+ },
+ {
+  "name": "Banket",
+  "site": "https://banket.ru",
+  "email": "a@banket.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "banket2"
+ },
+ {
+  "name": "Menunsk",
+  "site": "https://menunsk.ru",
+  "email": "portal@menunsk.ru",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: ресторан банкетный зал Куркино Новогорск мероприятия",
+  "status": "new",
+  "sent_ts": null,
+  "id": "menunsk"
+ },
+ {
+  "name": "Zelenograd",
+  "site": "https://zelenograd.gorko.ru",
+  "email": "info@peterletu.com",
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: организация мероприятий Долгопрудный Зеленоград Красногорск",
+  "status": "new",
+  "sent_ts": null,
+  "id": "zelenograd"
+ },
+ {
+  "name": "Den Goroda",
+  "site": "https://den-goroda.moscow",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: организация мероприятий Долгопрудный Зеленоград Красногорск",
+  "status": "new",
+  "sent_ts": null,
+  "id": "dengoroda"
  }
 ]
