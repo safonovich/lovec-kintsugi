@@ -1065,7 +1065,8 @@
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
   "sent_ts": 1791462396.294028,
-  "wa": "+79263533304"
+  "wa": "+79263533304",
+  "followup_ts": 1791813006.291329
  },
  {
   "id": "vkusoterria",
@@ -1077,7 +1078,8 @@
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
   "sent_ts": 1791463016.8942394,
-  "wa": "+79671330601"
+  "wa": "+79671330601",
+  "followup_ts": 1791813007.6271553
  },
  {
   "id": "wowpovod",
@@ -1088,7 +1090,8 @@
   "tg": "@SkazkaOP",
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
-  "sent_ts": 1791463629.7986476
+  "sent_ts": 1791463629.7986476,
+  "followup_ts": 1791813010.2868536
  },
  {
   "id": "barstreet",
@@ -1100,7 +1103,8 @@
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
   "sent_ts": 1791464243.962208,
-  "wa": "+79771197255"
+  "wa": "+79771197255",
+  "followup_ts": 1791813012.0093286
  },
  {
   "id": "xpresent",
@@ -1813,10 +1817,10 @@
   "site": "https://bebeshka.info",
   "email": "support@bebeshka.info",
   "phone": null,
-  "tg": null,
+  "tg": "@share",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791813034.699119
  },
  {
   "id": "vkvideo",
@@ -1834,22 +1838,22 @@
   "name": "Proffi Time",
   "site": "https://proffi-time.ru",
   "email": "its@redesign-plus.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79162592221",
+  "tg": "@proffi_time",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791813650.8510823
  },
  {
   "id": "cube",
   "name": "CUBE",
   "site": "https://cube.moscow",
   "email": "info@cube.moscow",
-  "phone": null,
-  "tg": null,
+  "phone": "+79645593717",
+  "tg": "@cube_moscow",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791814268.5208032
  },
  {
   "id": "orgpage",
@@ -1870,8 +1874,8 @@
   "phone": null,
   "tg": null,
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791814881.0267591
  },
  {
   "id": "studiabonbon",
