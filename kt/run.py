@@ -15,7 +15,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from kt import callbacks, enrich, inbox, kp, mailer, notify, poll, store
+from kt import callbacks, enrich, inbox, kp, llm, mailer, notify, poll, store
 
 MSK = zoneinfo.ZoneInfo("Europe/Moscow")
 
@@ -24,13 +24,20 @@ def log(msg: str) -> None:
     print(f"[kintsugi] {msg}", flush=True)
 
 
+class LlmDown(Exception):
+    """Нейронка не ответила: письмо писать нечем, отправлять нечего."""
+
+
 def issue_lead(a: dict, cfg: dict, pending: dict) -> None:
     """Обогатить лид, сгенерировать КП и выслать карточку в Telegram."""
     found = enrich.enrich(a, log)
     for f in ("email", "phone", "tg", "wa"):
         if found.get(f) and not a.get(f):
             a[f] = found[f]
-    subject, body = kp.make(a, found.get("site_text", ""), cfg, log)
+    made = kp.make(a, found.get("site_text", ""), cfg, log)
+    if made is None:
+        raise LlmDown(llm.last_error or "модель не ответила")
+    subject, body = made
     notify.send_lead(a, subject, body, pending, log,
                      cfg["kp"].get("portfolio_url", ""))
     a["status"] = "offered"
@@ -43,7 +50,10 @@ def _send_one(a: dict, cfg: dict, log) -> bool:
     for f in ("email", "phone", "tg", "wa"):
         if found.get(f) and not a.get(f):
             a[f] = found[f]
-    subject, body = kp.make(a, found.get("site_text", ""), cfg, log)
+    made = kp.make(a, found.get("site_text", ""), cfg, log)
+    if made is None:
+        raise LlmDown(llm.last_error or "модель не ответила")
+    subject, body = made
     if mailer.send(a["email"], subject, body, cfg, log, attach_kp=True):
         a["status"] = "sent"
         a["sent_ts"] = time.time()
@@ -98,7 +108,14 @@ def autosend(leads: list, state: dict, cfg: dict, today: str,
             break
 
         a = queue[0]
-        _send_one(a, cfg, log)
+        try:
+            _send_one(a, cfg, log)
+        except LlmDown as e:
+            notify.send_service(
+                f"⚠️ Письма не пишутся: {e}\n\n"
+                "Похоже, кончился баланс ChadGPT. Рассылку остановил — "
+                "шаблонные письма клиентам не ушли.", log)
+            break
         # пауза взводится в любом случае: при сбое SMTP не долбимся в тот же адрес
         state["autosend_ts"] = time.time()
         sent += 1
@@ -173,7 +190,13 @@ def main() -> None:
                     "и запусти workflow Collect (или нажми «🔄 Обновить базу»).", log)
                 state["base_empty_warned"] = today
         for a in batch:
-            issue_lead(a, cfg, pending)
+            try:
+                issue_lead(a, cfg, pending)
+            except LlmDown as e:
+                notify.send_service(
+                    f"⚠️ Лиды не оформляются: {e}\n\n"
+                    "Похоже, кончился баланс ChadGPT.", log)
+                break
         state["last_leads_date"] = today
         log(f"выдано лидов: {len(batch)}, осталось новых: {len(fresh) - len(batch)}")
 
@@ -185,7 +208,13 @@ def main() -> None:
             notify.send_service(
                 "📭 Новых лидов нет — нажми «🔄 Обновить базу»", log)
         for a in fresh[:extra]:
-            issue_lead(a, cfg, pending)
+            try:
+                issue_lead(a, cfg, pending)
+            except LlmDown as e:
+                notify.send_service(
+                    f"⚠️ Лиды не оформляются: {e}\n\n"
+                    "Похоже, кончился баланс ChadGPT.", log)
+                break
 
     # 5. Состояние (workflow закоммитит data/ обратно)
     store.save("leads.json", leads)
