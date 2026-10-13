@@ -1115,7 +1115,8 @@
   "tg": "@xpresent_ru",
   "note": "найдено поиском: творческие мастер-классы на корпоратив Москва",
   "status": "sent",
-  "sent_ts": 1791485788.5534723
+  "sent_ts": 1791485788.5534723,
+  "followup_ts": 1791896903.685433
  },
  {
   "id": "lovart",
@@ -1138,7 +1139,8 @@
   "note": "найдено поиском: творческие мастер-классы на корпоратив Москва",
   "status": "sent",
   "sent_ts": 1791548170.5714014,
-  "wa": "+79859237997"
+  "wa": "+79859237997",
+  "followup_ts": 1791896904.9322438
  },
  {
   "id": "everdis",
@@ -1161,7 +1163,8 @@
   "note": "найдено поиском: event агентство тимбилдинг под ключ Москва",
   "status": "sent",
   "sent_ts": 1791548788.4067454,
-  "wa": "+79055472820"
+  "wa": "+79055472820",
+  "followup_ts": 1791896906.22917
  },
  {
   "id": "prostranstvo",
@@ -1172,7 +1175,8 @@
   "tg": null,
   "note": "найдено поиском: event агентство тимбилдинг под ключ Москва",
   "status": "sent",
-  "sent_ts": 1791549407.9523468
+  "sent_ts": 1791549407.9523468,
+  "followup_ts": 1791896909.0680993
  },
  {
   "id": "lazertag",
@@ -1194,7 +1198,8 @@
   "tg": "@DoctorTeam1_bot",
   "note": "найдено поиском: организация тимбилдинга Москва компания",
   "status": "sent",
-  "sent_ts": 1791550029.3970373
+  "sent_ts": 1791550029.3970373,
+  "followup_ts": 1791896910.4460447
  },
  {
   "id": "mangogames",
@@ -1915,11 +1920,12 @@
   "name": "Irishman",
   "site": "https://irishman.ru",
   "email": "example@site.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74951362266",
+  "tg": "@IRISHMAN_bot",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null
+  "status": "sent",
+  "sent_ts": 1791896929.5534463,
+  "wa": "+79685930846"
  },
  {
   "id": "artris",
@@ -1958,11 +1964,11 @@
   "name": "School Himki",
   "site": "https://school-himki.ru",
   "email": "info@school-himki.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79160609976",
+  "tg": "@smartschoolkhimki",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1791897594.739507,
   "id": "schoolhimki"
  },
  {
@@ -2002,11 +2008,11 @@
   "name": "Stationvrn",
   "site": "https://stationvrn.ru",
   "email": "info@stationvrn.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79611092400",
+  "tg": "@kkstationvrn",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1791898213.3037844,
   "id": "stationvrn"
  },
  {
@@ -2035,11 +2041,11 @@
   "name": "Khimki Prazdnik",
   "site": "https://khimki-prazdnik.ru",
   "email": "info@prazdnikhimki.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+79637619043",
+  "tg": "@Irina_prazdnikhimki",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1791898832.2373605,
   "id": "khimkiprazdnik"
  },
  {
