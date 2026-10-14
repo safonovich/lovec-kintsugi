@@ -1211,7 +1211,8 @@
   "note": "найдено поиском: организация тимбилдинга Москва компания",
   "status": "sent",
   "sent_ts": 1791570404.6739106,
-  "wa": "+79160044537"
+  "wa": "+79160044537",
+  "followup_ts": 1791974961.2725961
  },
  {
   "id": "triumphagency",
@@ -1255,7 +1256,8 @@
   "tg": "@Station2025",
   "note": "найдено поиском: организация корпоративов для компаний Москва",
   "status": "sent",
-  "sent_ts": 1791571024.112393
+  "sent_ts": 1791571024.112393,
+  "followup_ts": 1791974962.9718504
  },
  {
   "id": "blacksart",
@@ -1267,7 +1269,8 @@
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
   "sent_ts": 1791571643.5479836,
-  "wa": "+74950232673"
+  "wa": "+74950232673",
+  "followup_ts": 1791974964.6616895
  },
  {
   "id": "eventmart",
@@ -1278,7 +1281,8 @@
   "tg": null,
   "note": "найдено поиском: мастер-классы для сотрудников компании Москва заказать",
   "status": "sent",
-  "sent_ts": 1791572257.0676594
+  "sent_ts": 1791572257.0676594,
+  "followup_ts": 1791974966.3209932
  },
  {
   "id": "studioartmyata",
@@ -2052,18 +2056,18 @@
   "name": "Moscowcountryclub",
   "site": "https://moscowcountryclub.ru",
   "email": "reception@mcc.updk.ru",
-  "phone": null,
-  "tg": null,
+  "phone": "+74992489999",
+  "tg": "@moscowcountryclub",
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
-  "status": "new",
-  "sent_ts": null,
+  "status": "sent",
+  "sent_ts": 1791974991.4571059,
   "id": "moscowcountryclub"
  },
  {
   "name": "Delispace",
   "site": "https://delispace.ru",
   "email": "info@delispace.ru",
-  "phone": null,
+  "phone": "+74952121155",
   "tg": null,
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
   "status": "new",
