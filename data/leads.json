@@ -2413,5 +2413,16 @@
   "status": "new",
   "sent_ts": null,
   "id": "palitrachuvstv"
+ },
+ {
+  "name": "HNUM",
+  "site": "https://hnum.ru",
+  "email": null,
+  "phone": null,
+  "tg": null,
+  "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
+  "status": "new",
+  "sent_ts": null,
+  "id": "hnum"
  }
 ]
