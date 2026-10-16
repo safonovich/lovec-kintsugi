@@ -68,16 +68,14 @@ per_run      = 4    # писем за прогон. GitHub даёт 3-4 прог
                     # 12-16 писем в день, как у FPV
 
 [llm]
-enabled  = true              # персонализация КП + черновики ответов
-provider = "chad"            # ChadGPT (подписка SAF) · "openai" = OpenRouter/AITunnel · "anthropic" = Claude
-api_base = "https://openrouter.ai/api/v1"   # используется только для provider="openai"
-model    = "claude-3.7-sonnet"   # у Chad; запасной: gpt-5.2. Для openai: qwen/qwen3-next-80b-a3b-instruct:free
-fallback_models = [
-  "meta-llama/llama-3.3-70b-instruct:free",
-  "google/gemma-4-31b-it:free",
-  "openai/gpt-oss-20b:free",
-]
-# ключ — в секрете GitHub LLM_API_KEY
+enabled  = true
+# Gemini говорит в OpenAI-совместимом формате — отдельный код для него не нужен.
+# Переехали 17.10.2026: у Chad на длинных сайтах лида срабатывал word-limit-exceeded.
+provider = "openai"
+api_base = "https://generativelanguage.googleapis.com/v1beta/openai"
+model    = "gemini-3.8-flash"
+fallback_models = []
+# ключ — в секрете GitHub LLM_API_KEY (ключ Gemini из AI Studio, не Chad)
 
 [email]
 enabled   = true
