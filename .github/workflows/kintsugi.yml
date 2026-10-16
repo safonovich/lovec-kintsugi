@@ -41,6 +41,9 @@ jobs:
         run: python kt/run.py
 
       - name: Сохранить состояние
+        # Состояние пишем всегда: если прогон упал после отправки писем,
+        # без этого followup_ts и пометки отбоя теряются — и всё уходит по второму разу.
+        if: always()
         run: |
           git config user.name "kintsugi-bot"
           git config user.email "kintsugi@users.noreply.github.com"
