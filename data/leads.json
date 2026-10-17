@@ -2039,7 +2039,8 @@
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
   "status": "sent",
   "sent_ts": 1791898213.3037844,
-  "id": "stationvrn"
+  "id": "stationvrn",
+  "followup_ts": 1792254710.462664
  },
  {
   "name": "Tomesto",
@@ -2072,7 +2073,8 @@
   "note": "найдено поиском: арт-пространство Куркино Химки мастер-классы аренда",
   "status": "sent",
   "sent_ts": 1791898832.2373605,
-  "id": "khimkiprazdnik"
+  "id": "khimkiprazdnik",
+  "followup_ts": 1792254711.9922762
  },
  {
   "name": "Moscowcountryclub",
