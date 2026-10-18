@@ -113,7 +113,7 @@ def autosend(leads: list, state: dict, cfg: dict, today: str,
         except LlmDown as e:
             notify.send_service(
                 f"⚠️ Письма не пишутся: {e}\n\n"
-                "Похоже, кончился баланс ChadGPT. Рассылку остановил — "
+                "Рассылку остановил — шаблонные письма клиентам не ушли.", log)
                 "шаблонные письма клиентам не ушли.", log)
             break
         # пауза взводится в любом случае: при сбое SMTP не долбимся в тот же адрес
@@ -195,7 +195,7 @@ def main() -> None:
             except LlmDown as e:
                 notify.send_service(
                     f"⚠️ Лиды не оформляются: {e}\n\n"
-                    "Похоже, кончился баланс ChadGPT.", log)
+                    "Выдачу лидов остановил.", log)
                 break
         state["last_leads_date"] = today
         log(f"выдано лидов: {len(batch)}, осталось новых: {len(fresh) - len(batch)}")
@@ -213,7 +213,7 @@ def main() -> None:
             except LlmDown as e:
                 notify.send_service(
                     f"⚠️ Лиды не оформляются: {e}\n\n"
-                    "Похоже, кончился баланс ChadGPT.", log)
+                    "Выдачу лидов остановил.", log)
                 break
 
     # 5. Состояние (workflow закоммитит data/ обратно)
