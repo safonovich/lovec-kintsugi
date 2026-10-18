@@ -84,14 +84,17 @@ def chat(system: str, user: str, cfg: dict, log, max_tokens: int = 700) -> str |
                 headers={"Authorization": f"Bearer {key}",
                          "content-type": "application/json"},
                 json={"model": m, "max_tokens": max_tokens,
+                      "reasoning_effort": "low",
                       "messages": [{"role": "system", "content": system},
                                    {"role": "user", "content": user}]},
-                timeout=60)
+                timeout=120)
             r.raise_for_status()
             txt = r.json()["choices"][0]["message"]["content"]
             if txt and txt.strip():
                 return txt
+            last_error = f"{m}: пустой ответ"
             log(f"llm({m}): пустой ответ — пробую следующую")
         except Exception as e:
+            last_error = f"{m}: {_err_text(e)}"[:300]
             log(f"llm({m}): {_err_text(e)}")
     return None
