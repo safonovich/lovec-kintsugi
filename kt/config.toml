@@ -74,7 +74,8 @@ enabled  = true
 provider = "openai"
 api_base = "https://generativelanguage.googleapis.com/v1beta/openai"
 model    = "gemini-3.8-flash"
-fallback_models = []
+# Если основная занята или думает слишком долго — берём лёгкую: она быстрее
+fallback_models = ["gemini-2.5-flash-lite"]
 # ключ — в секрете GitHub LLM_API_KEY (ключ Gemini из AI Studio, не Chad)
 
 [email]
